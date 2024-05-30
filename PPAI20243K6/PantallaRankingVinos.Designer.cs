@@ -1,6 +1,6 @@
 ﻿namespace PPAI20243K6
 {
-    partial class Form1
+    partial class PantallaRankingVinos
     {
         /// <summary>
         /// Variable del diseñador necesaria.

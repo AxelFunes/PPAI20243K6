@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Clases\Bodega.cs" />
+    <Compile Include="Clases\Enofilo.cs" />
+    <Compile Include="Clases\FormaVisualizacion.cs" />
+    <Compile Include="Clases\GestorGenerarRankingVinos.cs" />
+    <Compile Include="Clases\Pais.cs" />
+    <Compile Include="Clases\Provincia.cs" />
+    <Compile Include="Clases\RegionVitivinicola.cs" />
+    <Compile Include="Clases\Reseña.cs" />
+    <Compile Include="Clases\TipoReseña.cs" />
+    <Compile Include="Clases\TipoUva.cs" />
+    <Compile Include="Clases\Varietal.cs" />
+    <Compile Include="Clases\Vino.cs" />
+    <Compile Include="PantallaRankingVinos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="PantallaRankingVinos.Designer.cs">
+      <DependentUpon>PantallaRankingVinos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
