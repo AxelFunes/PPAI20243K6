@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PPAI20243K6.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,55 +13,118 @@ namespace PPAI20243K6
 {
     public partial class PantallaRankingVinos : Form
     {
+        private GestorGenerarRankingVinos gestor;
+        private DateTime fechaDesde;
+        private DateTime fechaHasta;
+        private string tipoReseña;
+        private string tipoVisualizacion;
         
+
         public PantallaRankingVinos()
         {
             InitializeComponent();
+            gestor = new GestorGenerarRankingVinos(this);
 
         }
-        public void TomarFechaDesde()
+        public void solicitarFechasDesdeHasta()
         {
+
             // Implementación del método para tomar fecha desde
         }
 
-        public void TomarFechaHasta()
+        public DateTime tomarFechaDesde()
         {
-            // Implementación del método para tomar fecha hasta
+            return dt_FechaInicio.Value;
         }
 
-        public void PedirSeleccionTipoReseña()
+        public DateTime tomarFechaHasta()
+        {
+            return dt_FechaFin.Value;
+        }
+        
+
+        public void pedirSeleccionTipoReseña()
         {
             // Implementación del método para pedir selección de tipo de reseña
+            lbl_TipoReseña.Visible = true;
+            cmb_TipoReseña.Visible = true;
+            tomarTipoReseña();
         }
 
-        public void TomarTipoReseña()
+        public void tomarTipoReseña()
         {
             // Implementación del método para tomar tipo de reseña
+            tipoReseña = cmb_TipoReseña.Text; //ojota las pelotas
+            gestor.tomarTipoReseña(tipoReseña);
+
         }
 
-        public void PedirSeleccionFormasVisualizacion()
+        public void pedirSeleccionFormasVisualizacion()
         {
             // Implementación del método para pedir selección de formas de visualización
+            gboxSelecTipoVisual.Visible = true;
+            tomarTiposFormasVisualizacion();
+            if (tipoVisualizacion!="")
+            {
+                solicitarConfirmacion();
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar al menos un tipo de visualizacion.");
+            }
+            
         }
 
-        public void TomarTiposFormasVisualizacion()
+        public void tomarTiposFormasVisualizacion()
         {
             // Implementación del método para tomar tipos de formas de visualización
+            tipoVisualizacion=gestor.tomarTipoFormasVisualizacion(chk_Excel.Checked, chk_pdf.Checked, chk_pantalla.Checked);
+
         }
 
-        public void SolicitarConfirmacion()
+        public void solicitarConfirmacion()
         {
             // Implementación del método para solicitar confirmación
+            DialogResult result = MessageBox.Show("Esta seguro que desea confirmar?","Confirmacion", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                // Código a ejecutar si se presiona Yes
+                tomarConfirmacion();
+            }
+            else if (result == DialogResult.No)
+            {
+                // Código a ejecutar si se presiona No
+
+            }
+
         }
 
-        public void TomarConfirmacion()
+        public void tomarConfirmacion()
         {
             // Implementación del método para tomar confirmación
+            gestor.tomarConfirmacion();
         }
 
-        public void InformarGeneracionExitosa()
+        public void informarGeneracionExitosa()
         {
             // Implementación del método para informar generación exitosa
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            fechaDesde = tomarFechaDesde();
+            fechaHasta = tomarFechaHasta();
+
+            gestor.fechasConsideracionReseñas(fechaDesde, fechaHasta);
+            if (gestor.fechasValidas) 
+            {
+                pedirSeleccionTipoReseña();
+            }
+            else
+            {
+                MessageBox.Show("Debe ingresar fechas Validas.");
+            }
+            
         }
     }
 }
