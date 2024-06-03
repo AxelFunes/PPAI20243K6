@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,9 +13,18 @@ namespace PPAI20243K6.Clases
         private string descripcion { get; set; }
         private string historia { get; set; }
         private string nombre { get; set; }
-        private DateTime periodoActualizacion { get; set; }
+        private int periodoActualizacion { get; set; }
         private List<Reseña> Reseñas;
         private RegionVitivinicola RegionVitivinicola;
+
+        public Bodega(string coordUbicacionBodega, string descripBodega, string historiaBodega, string nombreBodega, int periodoActualizacionBodega)
+        {
+            coordenadasUbicacion = coordUbicacionBodega;
+            descripcion = descripBodega;
+            historia = historiaBodega;
+            nombre = nombreBodega;
+            periodoActualizacion = periodoActualizacionBodega;
+        }
 
         public int ContarReseñas()
         {

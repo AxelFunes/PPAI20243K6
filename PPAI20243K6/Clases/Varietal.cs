@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,11 @@ namespace PPAI20243K6.Clases
         public string descripcion { get; set; }
         public decimal porcentajeComposicion { get; set; }
 
+        public Varietal(string descripcionVar, int porcentaje)
+        {
+            descripcion = descripcionVar;
+            porcentajeComposicion = porcentaje;
+        }
         public void ConocerTipoUva()
         {
             // Implementación del método para conocer tipo de uva
