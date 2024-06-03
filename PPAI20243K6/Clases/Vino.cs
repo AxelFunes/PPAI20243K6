@@ -69,10 +69,10 @@ namespace PPAI20243K6.Clases
             return false;
         }
 
-        public bool buscarVinosConReseña(int fechaDesde, int fechaHasta)
+        public bool buscarVinosConReseña(DateTime fechaDesde, DateTime fechaHasta)
         {
             // Implementación del método para buscar vinos con reseña
-            int? fecha = null;
+            DateTime? fecha = null;
             for (int i = 0; i < this.Reseñas.Count; i++)
             {
                 if (this.Reseñas[i].esFechaValida(fechaDesde, fechaHasta))

@@ -10,10 +10,10 @@ namespace PPAI20243K6.Clases
     {
         public string comentario { get; set; }
         public bool esPremium { get; set; }
-        public int fechaReseña { get; set; }
+        public DateTime fechaReseña { get; set; }
         public int puntaje { get; set; }
 
-        public Reseña(string comentarioRes, bool esPremiumRes, int fechaReseñaRes, int puntajeRes)
+        public Reseña(string comentarioRes, bool esPremiumRes, DateTime fechaReseñaRes, int puntajeRes)
         {
             comentario = comentarioRes;
             esPremium = esPremiumRes;
@@ -24,10 +24,10 @@ namespace PPAI20243K6.Clases
         {
             return esPremium;
         }
-        public int getFechaReseña()
-        {
-            return fechaReseña;
-        }
+        //public int getFechaReseña()
+        //{
+        //    return fechaReseña;
+        //}
         public bool SosDeEnofilo()
         {
             // Implementación del método para verificar si es de enófilo
@@ -45,7 +45,7 @@ namespace PPAI20243K6.Clases
             // Implementación del método para buscar reseña
         }
 
-        public bool esFechaValida(int fechaDesde, int fechaHasta)
+        public bool esFechaValida(DateTime fechaDesde, DateTime fechaHasta)
         {
             // Implementación del método para verificar si la fecha es válida
             
