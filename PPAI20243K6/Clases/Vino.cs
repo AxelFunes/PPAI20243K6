@@ -75,14 +75,15 @@ namespace PPAI20243K6.Clases
             DateTime? fecha = null;
             for (int i = 0; i < this.Reseñas.Count; i++)
             {
-                if (this.Reseñas[i].esFechaValida(fechaDesde, fechaHasta))
+                if (this.Reseñas[i].esFechaValida(fechaDesde, fechaHasta, out bool bandera))
                 {
-                    if (this.Reseñas[i].sosDeSommelier()) 
+                    if (bandera == true)
+                        if (this.Reseñas[i].sosDeSommelier()) 
 
-                    {
+                        {
 
 
-                    }
+                        }
 
                 }  
             }

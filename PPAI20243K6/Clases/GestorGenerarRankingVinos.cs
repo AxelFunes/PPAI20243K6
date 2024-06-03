@@ -13,8 +13,8 @@ namespace PPAI20243K6.Clases
         private DateTime fechaDesde;
         private DateTime fechaHasta;
         public bool fechasValidas;
-        private List<Vino> arrayVinos;
-       
+        List<Vino> arrayVinos = new List<Vino>();
+
 
         public GestorGenerarRankingVinos(PantallaRankingVinos pantalla)
         {
@@ -100,7 +100,10 @@ namespace PPAI20243K6.Clases
 
         public void buscarVinosReseñasPeriodo()
         {
-            List<Vino> vinos = arrayVinos;
+            if (arrayVinos == null)
+            {
+                arrayVinos = new List<Vino>();
+            }
             Vino vino1 = new Vino
                 (2023,
                 new DateTime(2023,07,13),
@@ -246,12 +249,13 @@ namespace PPAI20243K6.Clases
             arrayVinos.Add(vino9);
             arrayVinos.Add(vino10);
 
-            
+            List<Vino> vinosConReseña = new List<Vino>();
             for (int i = 0; i < arrayVinos.Count; i++)
             {
                 arrayVinos[i].buscarVinosConReseña(fechaDesde, fechaHasta);
-                
-                arrayVinos.Add(arrayVinos[i]);
+
+                vinosConReseña.Add(arrayVinos[i]);
+                Console.WriteLine("Array de vinos con reseña", vinosConReseña[i]);
                     
                 
 

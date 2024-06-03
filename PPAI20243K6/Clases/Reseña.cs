@@ -45,7 +45,7 @@ namespace PPAI20243K6.Clases
             // Implementación del método para buscar reseña
         }
 
-        public bool esFechaValida(DateTime fechaDesde, DateTime fechaHasta)
+        public bool esFechaValida(DateTime fechaDesde, DateTime fechaHasta, out bool bandera)
         {
             // Implementación del método para verificar si la fecha es válida
             
@@ -55,7 +55,15 @@ namespace PPAI20243K6.Clases
             //        fecha = this.Reseñas[i].getFechaReseña();
 
             //}
-            return (fechaReseña >= fechaDesde && fechaReseña <= fechaHasta);
+            if(fechaReseña >= fechaDesde && fechaReseña <= fechaHasta)
+            {
+                bandera = true;
+            }
+            else
+            {
+                bandera = false;
+            }
+            return bandera;
         }
 
         public decimal GetPuntaje()
