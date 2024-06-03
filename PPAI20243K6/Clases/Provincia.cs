@@ -9,6 +9,7 @@ namespace PPAI20243K6.Clases
     internal class Provincia
     {
         public string nombre { get; set; }
+        private Pais pais {get; set; }
 
         public int ContarRegiones()
         {
@@ -21,10 +22,11 @@ namespace PPAI20243K6.Clases
             // Implementación del método para mostrar regiones
         }
 
-        public Pais BuscarPais()
+        public string buscarPais()
         {
+            string nom = this.pais.getNombre();
             // Implementación del método para buscar país
-            return null;
+            return nom;
         }
     }
 }

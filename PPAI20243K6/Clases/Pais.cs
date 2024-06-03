@@ -10,13 +10,13 @@ namespace PPAI20243K6.Clases
     {
         public string nombre { get; set; }
 
-        public int ContarBodega()
+        public int contarBodega()
         {
             // Implementación del método para contar bodegas
             return 0;
         }
 
-        public string GetNombre()
+        public string getNombre()
         {
             return nombre;
         }

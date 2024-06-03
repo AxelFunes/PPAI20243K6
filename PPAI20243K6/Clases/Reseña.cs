@@ -34,10 +34,10 @@ namespace PPAI20243K6.Clases
             return true;
         }
 
-        public bool sosDeSommelier()
+        public bool sosDeSommelier(bool premium)
         {
             // Implementación del método para verificar si es de sommelier
-            return esPremium;
+            return (esPremium==premium);
         }
 
         public void BuscarReseña()
@@ -45,28 +45,24 @@ namespace PPAI20243K6.Clases
             // Implementación del método para buscar reseña
         }
 
-        public bool esFechaValida(DateTime fechaDesde, DateTime fechaHasta, out bool bandera)
+        
+
+        public bool esFechaValida(DateTime fechaDesde, DateTime fechaHasta)
         {
             // Implementación del método para verificar si la fecha es válida
-            
-            //for (int i = 0; i < this.Reseñas.Count; i++)
-            //{
-            //    if (this.Reseñas[i].esFechaValida())
-            //        fecha = this.Reseñas[i].getFechaReseña();
 
-            //}
-            if(fechaReseña >= fechaDesde && fechaReseña <= fechaHasta)
+            if (fechaReseña >= fechaDesde && fechaReseña <= fechaHasta)
             {
-                bandera = true;
+                return true;
             }
             else
             {
-                bandera = false;
-            }
-            return bandera;
+                return false;
+            }          
         }
 
-        public decimal GetPuntaje()
+
+        public int getPuntaje()
         {
             return puntaje;
         }

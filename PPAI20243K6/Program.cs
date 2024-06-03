@@ -16,7 +16,7 @@ namespace PPAI20243K6
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PantallaRankingVinos());
+            Application.Run(new Menu());
         }
     }
 }

@@ -40,7 +40,9 @@
             this.chk_Excel = new System.Windows.Forms.CheckBox();
             this.chk_pantalla = new System.Windows.Forms.CheckBox();
             this.gboxSelecTipoVisual = new System.Windows.Forms.GroupBox();
+            this.dgv_reseñas = new System.Windows.Forms.DataGridView();
             this.gboxSelecTipoVisual.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_reseñas)).BeginInit();
             this.SuspendLayout();
             // 
             // btnConfirmar
@@ -127,6 +129,7 @@
             this.chk_pdf.TabIndex = 10;
             this.chk_pdf.Text = "PDF";
             this.chk_pdf.UseVisualStyleBackColor = true;
+            this.chk_pdf.CheckedChanged += new System.EventHandler(this.chk_pdf_CheckedChanged);
             // 
             // chk_Excel
             // 
@@ -138,6 +141,7 @@
             this.chk_Excel.TabIndex = 9;
             this.chk_Excel.Text = "Excel";
             this.chk_Excel.UseVisualStyleBackColor = true;
+            this.chk_Excel.CheckedChanged += new System.EventHandler(this.chk_Excel_CheckedChanged);
             // 
             // chk_pantalla
             // 
@@ -149,6 +153,7 @@
             this.chk_pantalla.TabIndex = 11;
             this.chk_pantalla.Text = "Pantalla";
             this.chk_pantalla.UseVisualStyleBackColor = true;
+            this.chk_pantalla.CheckedChanged += new System.EventHandler(this.chk_pantalla_CheckedChanged);
             // 
             // gboxSelecTipoVisual
             // 
@@ -164,11 +169,21 @@
             this.gboxSelecTipoVisual.Text = "Tipo Visualizacion";
             this.gboxSelecTipoVisual.Visible = false;
             // 
+            // dgv_reseñas
+            // 
+            this.dgv_reseñas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_reseñas.Location = new System.Drawing.Point(385, 65);
+            this.dgv_reseñas.Name = "dgv_reseñas";
+            this.dgv_reseñas.Size = new System.Drawing.Size(656, 374);
+            this.dgv_reseñas.TabIndex = 20;
+            this.dgv_reseñas.Visible = false;
+            // 
             // PantallaRankingVinos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1091, 608);
+            this.Controls.Add(this.dgv_reseñas);
             this.Controls.Add(this.gboxSelecTipoVisual);
             this.Controls.Add(this.cmb_TipoReseña);
             this.Controls.Add(this.lbl_TipoReseña);
@@ -182,6 +197,7 @@
             this.Text = "Form1";
             this.gboxSelecTipoVisual.ResumeLayout(false);
             this.gboxSelecTipoVisual.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_reseñas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,6 +217,7 @@
         private System.Windows.Forms.CheckBox chk_Excel;
         private System.Windows.Forms.CheckBox chk_pantalla;
         private System.Windows.Forms.GroupBox gboxSelecTipoVisual;
+        private System.Windows.Forms.DataGridView dgv_reseñas;
     }
 }
 

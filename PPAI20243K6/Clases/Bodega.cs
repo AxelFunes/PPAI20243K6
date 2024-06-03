@@ -37,9 +37,15 @@ namespace PPAI20243K6.Clases
             // Implementación del método para mostrar todos los vinos
         }
 
-        public string GetNombre()
+        public string getNombre()
         {
             return nombre;
+        }
+        public string buscarRegionYPais()
+        {
+            string reg = this.RegionVitivinicola.getNombre();
+            string pais = this.RegionVitivinicola.buscarPais();
+            return reg+","+pais;
         }
     }
 }

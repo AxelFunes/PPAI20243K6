@@ -102,7 +102,7 @@ namespace PPAI20243K6
         public void tomarConfirmacion()
         {
             // Implementación del método para tomar confirmación
-            gestor.tomarConfirmacion();
+            gestor.tomarConfirmacion(cmb_TipoReseña.SelectedText);
         }
 
         public void informarGeneracionExitosa()
@@ -114,6 +114,7 @@ namespace PPAI20243K6
         {
             fechaDesde = tomarFechaDesde();
             fechaHasta = tomarFechaHasta();
+            
 
             gestor.fechasConsideracionReseñas(fechaDesde, fechaHasta);
             if (gestor.fechasValidas) 
@@ -124,7 +125,26 @@ namespace PPAI20243K6
             {
                 MessageBox.Show("Debe ingresar fechas Validas.");
             }
+
             
+        }
+
+        private void chk_Excel_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_pdf.Checked = false;
+            chk_pantalla.Checked = false;
+        }
+
+        private void chk_pdf_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_Excel.Checked = false;
+            chk_pantalla.Checked = false;
+        }
+
+        private void chk_pantalla_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_pdf.Checked = false;
+            chk_Excel.Checked = false;
         }
     }
 }

@@ -68,6 +68,7 @@
             this.consultarEncuestaToolStripMenuItem.Name = "consultarEncuestaToolStripMenuItem";
             this.consultarEncuestaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarEncuestaToolStripMenuItem.Text = "Generar Ranking";
+            this.consultarEncuestaToolStripMenuItem.Click += new System.EventHandler(this.consultarEncuestaToolStripMenuItem_Click);
             // 
             // toolStripButton1
             // 

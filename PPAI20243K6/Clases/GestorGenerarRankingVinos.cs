@@ -14,6 +14,12 @@ namespace PPAI20243K6.Clases
         private DateTime fechaHasta;
         public bool fechasValidas;
         List<Vino> arrayVinos = new List<Vino>();
+        List<Vino> vinosConReseña = new List<Vino>();
+
+        private float precioVino;
+        private string nombreVino;
+        private string bodega;
+        private List<string> varietal;
 
 
         public GestorGenerarRankingVinos(PantallaRankingVinos pantalla)
@@ -92,13 +98,18 @@ namespace PPAI20243K6.Clases
             return tipoVis;
         }
 
-        public void tomarConfirmacion()
+        public void tomarConfirmacion(string tipoReseña)
         {
             // Implementación del método para tomar confirmación
-            buscarVinosReseñasPeriodo();
+            bool premium = false;
+            if (tipoReseña=="Sommelier")
+            {
+                premium= true;
+            }
+            buscarVinosReseñasPeriodo(premium);
         }
 
-        public void buscarVinosReseñasPeriodo()
+        public void buscarVinosReseñasPeriodo(bool premium)
         {
             if (arrayVinos == null)
             {
@@ -205,7 +216,7 @@ namespace PPAI20243K6.Clases
             Reseña res2 = new Reseña("Comentario Reseñas", true, new DateTime(2023, 07, 13), 9);
             Reseña res3 = new Reseña("Comentario Reseñas", true, new DateTime(2023, 07, 13), 9);
             Reseña res4 = new Reseña("Comentario Reseñas", true, new DateTime(2023, 07, 13), 9);
-            Reseña res5 = new Reseña("Comentario Reseñas", true, new DateTime(2023, 07, 13), 9);
+            Reseña res5 = new Reseña("Comentario Reseñas", false, new DateTime(2023, 07, 13), 2);
             Reseña res6 = new Reseña("Comentario Reseñas", true, new DateTime(2023, 07, 13), 9);
             Reseña res7 = new Reseña("Comentario Reseñas", true, new DateTime(2023, 07, 13), 9);
             Reseña res8 = new Reseña("Comentario Reseñas", true, new DateTime(2023, 07, 13), 9);
@@ -225,6 +236,7 @@ namespace PPAI20243K6.Clases
             vino10.agregarVarietal(var5);
 
             vino1.agregarReseña(res1);
+            vino1.agregarReseña(res5);
             vino2.agregarReseña(res2);
             vino3.agregarReseña(res3);
             vino4.agregarReseña(res4);
@@ -249,23 +261,51 @@ namespace PPAI20243K6.Clases
             arrayVinos.Add(vino9);
             arrayVinos.Add(vino10);
 
-            List<Vino> vinosConReseña = new List<Vino>();
+            //List<Vino> vinosConReseña = new List<Vino>();
+           
+
+            //vinosConReseña = Vino.buscarVinosConReseñaB(arrayVinos, fechaDesde, fechaHasta);------------------
             for (int i = 0; i < arrayVinos.Count; i++)
             {
-                arrayVinos[i].buscarVinosConReseña(fechaDesde, fechaHasta);
-
-                vinosConReseña.Add(arrayVinos[i]);
-                Console.WriteLine("Array de vinos con reseña", vinosConReseña[i]);
-                    
                 
 
+                if (arrayVinos[i].buscarVinosConReseña(fechaDesde, fechaHasta, premium))
+                {
+                    vinosConReseña.Add(arrayVinos[i]);
+                    
+                }
+          
             }
+            calcularPromedioDeSommelierEnPeriodo(vinosConReseña);
+            vinosConReseña=ordenarVinoPorPromedio(vinosConReseña);
+
+            for (int i = 0; i < vinosConReseña.Count; i++)
+            {
+                precioVino= vinosConReseña[i].getPrecio();
+                nombreVino= vinosConReseña[i].getNombre();
+                bodega = vinosConReseña[i].buscarBodega();
+                varietal = vinosConReseña[i].buscarVarietal();
 
 
+            }
+            
+            //--------------
         }
-        public void ordenarVinoPorPromedio()
+        public List<Vino> ordenarVinoPorPromedio(List<Vino> vinos)
         {
             // Implementación del método para ordenar vino por promedio
+            List<Vino> listaOrdenada = new List<Vino>();
+            listaOrdenada = vinos.OrderByDescending(v => v.getPromedio()).ToList();
+
+            return listaOrdenada;
+        }
+        public void calcularPromedioDeSommelierEnPeriodo(List<Vino> vinos)
+        {
+            for (int i = 0; i < vinos.Count; i++)
+            {
+                vinos[i].setPromedio(vinos[i].calcularPromedioDeSommelierEnPeriodo()); 
+            }
+
         }
 
         public void FinCU()

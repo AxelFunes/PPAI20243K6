@@ -9,7 +9,7 @@ namespace PPAI20243K6.Clases
 {
     internal class Varietal
     {
-        public string descripcion { get; set; }
+        private string descripcion { get; set; }
         public decimal porcentajeComposicion { get; set; }
 
         public Varietal(string descripcionVar, int porcentaje)
@@ -21,7 +21,10 @@ namespace PPAI20243K6.Clases
         {
             // Implementación del método para conocer tipo de uva
         }
-
+        public string getDescripcion()
+        {
+            return descripcion;
+        }
         public bool EsDeTipoUva()
         {
             // Implementación del método para verificar si es de tipo de uva

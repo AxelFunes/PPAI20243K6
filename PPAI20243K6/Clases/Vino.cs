@@ -20,6 +20,7 @@ namespace PPAI20243K6.Clases
 
         private List<Varietal> Varietal;
         private Bodega Bodega;
+        private double promedio;
         
 
         public Vino(int añada, DateTime fechaActualizacion, bool imagenEtiqueta, string nombre, int notaCata, float precioARS, string coordUbicacionBodega, string descripBodega, string historiaBodega, string nombreBodega, int periodoActualizacionBodega)
@@ -36,6 +37,37 @@ namespace PPAI20243K6.Clases
             //CambiosEst.Add(primerCambioEstado);
             //RespuestasCliente = new List<RespuestaDeCliente>();
 
+        }
+        public void setPromedio(double prom)
+        {
+            this.promedio = prom;
+        }
+        public double getPromedio()
+        {
+            return this.promedio;
+        }
+        public float getPrecio()
+        {
+            return this.precioARS;
+        }
+        public string getNombre()
+        {
+            return this.nombre;
+        }
+        public List<string> buscarVarietal()
+        {
+            List<string> listDesc = new List<string>();
+            foreach (var i in Varietal)
+            {
+                listDesc.Add(i.getDescripcion());
+            }
+            return listDesc;
+        }
+        public string buscarBodega()
+        {
+            string nom=this.Bodega.getNombre();
+            string reg = this.Bodega.buscarRegionYPais();
+            return nom+","+reg;
         }
 
         public void agregarVarietal(Varietal var)
@@ -69,33 +101,48 @@ namespace PPAI20243K6.Clases
             return false;
         }
 
-        public bool buscarVinosConReseña(DateTime fechaDesde, DateTime fechaHasta)
+        
+
+        public bool buscarVinosConReseña(DateTime fechaDesde, DateTime fechaHasta, bool premium)
         {
             // Implementación del método para buscar vinos con reseña
-            DateTime? fecha = null;
+            bool reseñaValida = false;
             for (int i = 0; i < this.Reseñas.Count; i++)
             {
-                if (this.Reseñas[i].esFechaValida(fechaDesde, fechaHasta, out bool bandera))
+                if (this.Reseñas[i].esFechaValida(fechaDesde, fechaHasta)&& this.Reseñas[i].sosDeSommelier(premium))
                 {
-                    if (bandera == true)
-                        if (this.Reseñas[i].sosDeSommelier()) 
-
-                        {
-
-
-                        }
-
-                }  
+                    reseñaValida = true;
+                }
             }
-            return (fecha >= fechaDesde && fecha <= fechaHasta);
-
+            return reseñaValida;
 
         }
-
-        public decimal CalcularPuntajePromedio()
+        public double calcularPromedioDeSommelierEnPeriodo()
         {
             // Implementación del método para calcular puntaje promedio
-            return 0;
+            double promedio = calcularPuntajePromedio();
+            return promedio;
+        }
+        public double calcularPuntajePromedio()
+        {
+            // Implementación del método para calcular puntaje promedio
+            List<int> puntajes = new List<int>();
+            for (int i = 0; i < this.Reseñas.Count; i++)
+            {
+                puntajes.Add(this.Reseñas[i].getPuntaje());                                  
+            }
+            if (puntajes == null || puntajes.Count == 0)
+            {
+                throw new ArgumentException("La lista no puede estar vacía o ser nula");
+            }
+
+            double suma = 0;
+            foreach (double numero in puntajes)
+            {
+                suma += numero;
+            }
+
+            return suma / puntajes.Count;
         }
     }
 }
