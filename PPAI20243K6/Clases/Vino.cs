@@ -23,7 +23,7 @@ namespace PPAI20243K6.Clases
         private double promedio;
         
 
-        public Vino(int añada, DateTime fechaActualizacion, bool imagenEtiqueta, string nombre, int notaCata, float precioARS, string coordUbicacionBodega, string descripBodega, string historiaBodega, string nombreBodega, int periodoActualizacionBodega)
+        public Vino(int añada, DateTime fechaActualizacion, bool imagenEtiqueta, string nombre, int notaCata, float precioARS, string coordUbicacionBodega, string descripBodega, string historiaBodega, string nombreBodega, int periodoActualizacionBodega,string nombreReg, string descripcionReg, string nomPais)
         {
             //Id = id;
             //DescripcionOperador = desc;
@@ -33,7 +33,7 @@ namespace PPAI20243K6.Clases
             //ObservacionAuditor = observAuditor;
             Varietal= new List<Varietal>();
             Reseñas = new List<Reseña>();
-            Bodega = new Bodega(coordUbicacionBodega, descripBodega, historiaBodega, nombreBodega, periodoActualizacionBodega);
+            Bodega = new Bodega(coordUbicacionBodega, descripBodega, historiaBodega, nombreBodega, periodoActualizacionBodega, nombreReg, descripcionReg, nomPais);
             //CambiosEst.Add(primerCambioEstado);
             //RespuestasCliente = new List<RespuestaDeCliente>();
 

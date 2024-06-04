@@ -17,14 +17,14 @@ namespace PPAI20243K6.Clases
         private List<Reseña> Reseñas;
         private RegionVitivinicola regionVitivinicola;
 
-        public Bodega(string coordUbicacionBodega, string descripBodega, string historiaBodega, string nombreBodega, int periodoActualizacionBodega)
+        public Bodega(string coordUbicacionBodega, string descripBodega, string historiaBodega, string nombreBodega, int periodoActualizacionBodega, string nombreReg, string descripcionReg, string nomPais)
         {
             coordenadasUbicacion = coordUbicacionBodega;
             descripcion = descripBodega;
             historia = historiaBodega;
             nombre = nombreBodega;
             periodoActualizacion = periodoActualizacionBodega;
-            regionVitivinicola = new RegionVitivinicola(descripcion, nombre);
+            regionVitivinicola = new RegionVitivinicola(descripcionReg, nombreReg, nomPais);
         }
 
         public int ContarReseñas()
@@ -37,9 +37,9 @@ namespace PPAI20243K6.Clases
         {
             // Implementación del método para mostrar todos los vinos
         }
-        public void agregarRegion(string descripcion, string nombre)
+        public void agregarRegion(string descripcion, string nombre, string nomPais)
         {
-            this.regionVitivinicola = new RegionVitivinicola(descripcion, nombre);
+            this.regionVitivinicola = new RegionVitivinicola(descripcion, nombre, nomPais);
         }
         public string getNombre()
         {
