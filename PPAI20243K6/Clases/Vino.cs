@@ -79,6 +79,7 @@ namespace PPAI20243K6.Clases
         {
             Reseñas.Add(res);
         }
+
         public void CalcularRanking()
         {
             // Implementación del método para calcular ranking

@@ -8,7 +8,11 @@ namespace PPAI20243K6.Clases
 {
     internal class Pais
     {
-        public string nombre { get; set; }
+        public string nombrePais { get; set; }
+        public Pais(string nombre)
+        {
+            nombrePais = nombre;
+        }
 
         public int contarBodega()
         {
@@ -18,7 +22,7 @@ namespace PPAI20243K6.Clases
 
         public string getNombre()
         {
-            return nombre;
+            return nombrePais;
         }
     }
 }

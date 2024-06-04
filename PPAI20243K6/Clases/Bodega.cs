@@ -15,7 +15,7 @@ namespace PPAI20243K6.Clases
         private string nombre { get; set; }
         private int periodoActualizacion { get; set; }
         private List<Reseña> Reseñas;
-        private RegionVitivinicola RegionVitivinicola;
+        private RegionVitivinicola regionVitivinicola;
 
         public Bodega(string coordUbicacionBodega, string descripBodega, string historiaBodega, string nombreBodega, int periodoActualizacionBodega)
         {
@@ -24,6 +24,7 @@ namespace PPAI20243K6.Clases
             historia = historiaBodega;
             nombre = nombreBodega;
             periodoActualizacion = periodoActualizacionBodega;
+            regionVitivinicola = new RegionVitivinicola(descripcion, nombre);
         }
 
         public int ContarReseñas()
@@ -36,15 +37,18 @@ namespace PPAI20243K6.Clases
         {
             // Implementación del método para mostrar todos los vinos
         }
-
+        public void agregarRegion(string descripcion, string nombre)
+        {
+            this.regionVitivinicola = new RegionVitivinicola(descripcion, nombre);
+        }
         public string getNombre()
         {
             return nombre;
         }
         public string buscarRegionYPais()
         {
-            string reg = this.RegionVitivinicola.getNombre();
-            string pais = this.RegionVitivinicola.buscarPais();
+            string reg = this.regionVitivinicola.getNombre();
+            string pais = this.regionVitivinicola.buscarPais();
             return reg+","+pais;
         }
     }

@@ -8,20 +8,37 @@ namespace PPAI20243K6.Clases
 {
     internal class RegionVitivinicola
     {
-        public string descripcion { get; set; }
-        public string nombre { get; set; }
+        public string descripcionReg { get; set; }
+        public string nombreReg { get; set; }
 
         private Provincia provincia { get; set; }
 
+        public RegionVitivinicola(string descripcion, string nombre)
+        {
+           
+            descripcionReg = descripcion;
+            
+            nombreReg = nombre;
+           
+            Pais pais= new Pais(nombre);
+        }
         public int ContarBodegas()
         {
             // Implementación del método para contar bodegas
             return 0;
         }
+        public void agregarProvincia( string nombre)
+        {
+            this.provincia = new Provincia(nombre);
+        }
 
         public string getNombre()
         {
-            return nombre;
+            return nombreReg;
+        }
+        public string getDescripcion()
+        {
+            return descripcionReg;
         }
         public string buscarPais()
         {
