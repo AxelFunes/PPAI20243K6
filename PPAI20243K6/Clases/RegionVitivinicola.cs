@@ -40,9 +40,9 @@ namespace PPAI20243K6.Clases
         {
             return descripcionReg;
         }
-        public string buscarPais()
+        public string buscarProvPais()
         {
-            string pais= this.provincia.buscarPais();
+            string pais= provincia.buscarPais();
             return pais;
         }
     }

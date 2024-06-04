@@ -48,7 +48,7 @@ namespace PPAI20243K6.Clases
         public string buscarRegionYPais()
         {
             string reg = this.regionVitivinicola.getNombre();
-            string pais = this.regionVitivinicola.buscarPais();
+            string pais = this.regionVitivinicola.buscarProvPais();
             return reg+","+pais;
         }
     }
