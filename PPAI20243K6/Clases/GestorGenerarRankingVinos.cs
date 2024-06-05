@@ -103,50 +103,26 @@ namespace PPAI20243K6.Clases
         public void tomarConfirmacion(string tipoReseña, string tipoVisualizacion)
         {
             // Implementación del método para tomar confirmación
+            //----
+            vinosConReseña.Clear();
+          
+            //----
             bool premium = false;
             if (tipoReseña=="Sommelier")
             {
                 premium= true;
             }
             buscarVinosReseñasPeriodo(premium, tipoVisualizacion);
-            /*
-            if (tipoVisualizacion== "pantalla")
-            {
-                foreach (var item in vinosConReseña)
-                {
-                    DataGridViewRow fila = new DataGridViewRow();
-
-                    DataGridViewTextBoxCell celdaId = new DataGridViewTextBoxCell();
-                    celdaId.Value = item.;
-                    fila.Cells.Add(celdaId);
-
-                    DataGridViewTextBoxCell celdaCliente = new DataGridViewTextBoxCell();
-                    celdaCliente.Value = datosLlamadaSeleccionada[0];
-                    fila.Cells.Add(celdaCliente);
-
-                    DataGridViewTextBoxCell celdaEstadoActual = new DataGridViewTextBoxCell();
-                    celdaEstadoActual.Value = datosLlamadaSeleccionada[1];
-                    fila.Cells.Add(celdaEstadoActual);
-
-                    DataGridViewTextBoxCell celdaDuracion = new DataGridViewTextBoxCell();
-                    celdaDuracion.Value = datosLlamadaSeleccionada[2];
-                    fila.Cells.Add(celdaDuracion);
-
-                    DataGridViewTextBoxCell celdaDescEnc = new DataGridViewTextBoxCell();
-                    celdaDescEnc.Value = descEncuesta;
-                    fila.Cells.Add(celdaDescEnc);
-                }
-            }
-            */
+            
 
         }
 
         public void buscarVinosReseñasPeriodo(bool premium, string tipoVis)
         {
-            if (arrayVinos == null)
+            if (arrayVinos.Count == 0)
             {
                 arrayVinos = new List<Vino>();
-            }
+            //}
             //En esta parte del codigo lo que hacemos es instanciar la clase Vino con los diferentes vinos con sus atributos
             Vino vino1 = new Vino(2023, new DateTime(2023, 07, 13), true, "Norton", 7, 2850, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo, \"El Rincón del Sabor\" es una bodega que transporta a sus visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó a Argentina con sueños de traer consigo un pedazo de su tierra natal, la bodega ha sido un testigo silencioso del crecimiento y la evolución del barrio de San Telmo.", "Norton,", 200, "Luján de Cuyo", "Descripcion region", "ARGENTINA");
 
@@ -157,17 +133,17 @@ namespace PPAI20243K6.Clases
             Vino vino4 = new Vino(2023, new DateTime(2023, 07, 13), true, "Susana Balbo", 7, 16694, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo, \"El Rincón del Sabor\" es una bodega que transporta a sus visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó a Argentina con sueños de traer consigo un pedazo de su tierra natal, la bodega ha sido un testigo silencioso del crecimiento y la evolución del barrio de San Telmo.", "Susana Balbo Wine,", 200, "Luján de Cuyo y Valle de Uco", "Descripcion region", "ARGENTINA");
 
             Vino vino5 = new Vino(2023, new DateTime(2023, 07, 13), true, "Santa Julia", 7, 5000, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Santa Julia,", 200, "Maipú y Valle de Uco", "Descripcion region", "ARGENTINA");
-            
+
             Vino vino6 = new Vino(2023, new DateTime(2023, 07, 13), true, "El Enemigo", 7, 28791, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "La Aleanna,", 200, "Gualtallary, Valle de Uco", "Descripcion region", "ARGENTINA");
-            
+
             Vino vino7 = new Vino(2023, new DateTime(2023, 07, 13), true, "Luigi Bosca De Sangre", 7, 19579, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", " Finca El Paraíso - Bodega Luigi Bosca,", 200, "Maipú", "Descripcion region", "ARGENTINA");
-            
+
             Vino vino8 = new Vino(2023, new DateTime(2023, 07, 13), true, "Quimerino Tinto", 7, 35000, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Achaval Ferrer,", 200, "Luján de Cuyo y Valle de Uco", "Descripcion region", "ARGENTINA");
-            
+
             Vino vino9 = new Vino(2023, new DateTime(2023, 07, 13), true, "Viña Cobos", 7, 34320, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Viña Cobos,", 200, "Luján de Cuyo y Valle de Uco", "Descripcion region", "ARGENTINA");
-            
+
             Vino vino10 = new Vino(2023, new DateTime(2023, 07, 13), true, "Zuccardi", 7, 24901, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Zuccardi,", 200, "Valle de Uco", "Descripcion region", "ARGENTINA");
-            
+
             //Instanciamos la clase Varietal y creamos los distintos varietales
             Varietal var1 = new Varietal("Torrontés", 25); //v5
 
@@ -301,6 +277,7 @@ namespace PPAI20243K6.Clases
             arrayVinos.Add(vino9);
             arrayVinos.Add(vino10);
 
+            }
             //Recorremos el array de vinos, para poder obtener los vinos con reseña utilizamos el metoo buscarVinosConReseña
             //En caso que tengan una reseña con las fechas indicadas y sea premium, se crea un array nuevo de vinos con reseña
             for (int i = 0; i < arrayVinos.Count; i++)

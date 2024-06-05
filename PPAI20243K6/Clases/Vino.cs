@@ -23,6 +23,7 @@ namespace PPAI20243K6.Clases
         private Bodega Bodega;
         private double promedio;
         
+        
 
         public Vino(int añada, DateTime fechaActualizacion, bool imagenEtiqueta, string nombre, int notaCata, float precioARS, string coordUbicacionBodega, string descripBodega, string historiaBodega, string nombreBodega, int periodoActualizacionBodega,string nombreReg, string descripcionReg, string nomPais)
         {

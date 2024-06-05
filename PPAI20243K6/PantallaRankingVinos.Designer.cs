@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnConfirmar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.lbl_FechaInicio = new System.Windows.Forms.Label();
             this.lbl_FechaFin = new System.Windows.Forms.Label();
             this.dt_FechaInicio = new System.Windows.Forms.DateTimePicker();
@@ -58,15 +57,6 @@
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = true;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(515, 503);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // lbl_FechaInicio
             // 
@@ -219,7 +209,6 @@
             this.Controls.Add(this.dt_FechaInicio);
             this.Controls.Add(this.lbl_FechaFin);
             this.Controls.Add(this.lbl_FechaInicio);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnConfirmar);
             this.Name = "PantallaRankingVinos";
             this.Text = "Form1";
@@ -234,7 +223,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnConfirmar;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lbl_FechaInicio;
         private System.Windows.Forms.Label lbl_FechaFin;
         private System.Windows.Forms.DateTimePicker dt_FechaInicio;

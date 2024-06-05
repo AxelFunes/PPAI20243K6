@@ -54,8 +54,16 @@ namespace PPAI20243K6
         public void tomarTipoReseña()
         {
             // Implementación del método para tomar tipo de reseña
-            tipoReseña = cmb_TipoReseña.Text; //ojota las pelotas
-            gestor.tomarTipoReseña(tipoReseña);
+            if (cmb_TipoReseña.Text!="")
+            {
+                tipoReseña = cmb_TipoReseña.Text;
+                gestor.tomarTipoReseña(tipoReseña);
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un tipo de Reseña.");
+            }
+            
 
         }
 
@@ -70,7 +78,7 @@ namespace PPAI20243K6
             }
             else
             {
-                MessageBox.Show("Debe seleccionar al menos un tipo de visualizacion.");
+                MessageBox.Show("Debe seleccionar un tipo de visualizacion.");
             }
             
         }
@@ -112,6 +120,9 @@ namespace PPAI20243K6
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+            //Limpia la datagrid de reseñas
+            dgv_reseñas.Rows.Clear();
+
             fechaDesde = tomarFechaDesde();
             fechaHasta = tomarFechaHasta();
             
