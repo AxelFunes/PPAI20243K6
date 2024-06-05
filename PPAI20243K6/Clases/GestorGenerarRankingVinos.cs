@@ -150,9 +150,9 @@ namespace PPAI20243K6.Clases
                 (2023,
                 new DateTime(2023,07,13),
                 true,
-                "Santa Ver",
+                "Norton",
                 7,
-                5000,
+                2850,
                 "192.233.22" ,
                 "Ubicada en el corazón del encantador barrio de San Telmo," +
                 " \"El Rincón del Sabor\" es una bodega que transporta a sus " +
@@ -161,14 +161,14 @@ namespace PPAI20243K6.Clases
                 " a Argentina con sueños de traer consigo un pedazo de su tierra natal," +
                 " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" +
                 " barrio de San Telmo.",
-                "Rincon del Sabor," ,
-                200, "Nombre region", "Descripcion region", "ARGENTINA");
+                "Norton," ,
+                200, "Luján de Cuyo", "Descripcion region", "ARGENTINA");
             Vino vino2 = new Vino(2023,
                 new DateTime(2023, 07, 13),
                 true,
-                "Santa Julia",
+                "Trapiche",
                 7,
-                5000,
+                6050,
                 "192.233.22",
                 "Ubicada en el corazón del encantador barrio de San Telmo," +
                 " \"El Rincón del Sabor\" es una bodega que transporta a sus " +
@@ -177,14 +177,14 @@ namespace PPAI20243K6.Clases
                 " a Argentina con sueños de traer consigo un pedazo de su tierra natal," +
                 " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" +
                 " barrio de San Telmo.",
-                "Rincon del Sabor,",
-                200, "Nombre region", "Descripcion region", "ARGENTINA");
+                "Bodega Trapiche,",
+                200, "Maipú y Valle de Uco", "Descripcion region", "ARGENTINA");
             Vino vino3 = new Vino(2023,
                 new DateTime(2023, 07, 13),
                 true,
-                "Romioli",
+                "PORTILLO",
                 7,
-                5000,
+                7776,
                 "192.233.22",
                 "Ubicada en el corazón del encantador barrio de San Telmo," +
                 " \"El Rincón del Sabor\" es una bodega que transporta a sus " +
@@ -193,14 +193,14 @@ namespace PPAI20243K6.Clases
                 " a Argentina con sueños de traer consigo un pedazo de su tierra natal," +
                 " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" +
                 " barrio de San Telmo.",
-                "Rincon del Sabor,",
-                200, "Nombre region", "Descripcion region", "ARGENTINA");
+                "Salentein,",
+                200, "Valle de Uco", "Descripcion region", "ARGENTINA");
             Vino vino4 = new Vino(2023,
                 new DateTime(2023, 07, 13),
                 true,
-                "Santa Dani",
+                "Susana Balbo",
                 7,
-                5000,
+                16694,
                 "192.233.22",
                 "Ubicada en el corazón del encantador barrio de San Telmo," +
                 " \"El Rincón del Sabor\" es una bodega que transporta a sus " +
@@ -209,39 +209,40 @@ namespace PPAI20243K6.Clases
                 " a Argentina con sueños de traer consigo un pedazo de su tierra natal," +
                 " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" +
                 " barrio de San Telmo.",
-                "Rincon del Sabor,",
-                200, "Nombre region", "Descripcion region", "ARGENTINA");
-            Vino vino5 = new Vino(2023, new DateTime(2023, 07, 13), true, "Santa Julia", 7, 5000, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Rincon del Sabor,", 200, "Nombre region", "Descripcion region", "ARGENTINA");
+                "Susana Balbo Wine,",
+                200, "Luján de Cuyo y Valle de Uco", "Descripcion region", "ARGENTINA");
+            Vino vino5 = new Vino(2023, new DateTime(2023, 07, 13), true, "Santa Julia", 7, 5000, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Santa Julia,", 200, "Maipú y Valle de Uco", "Descripcion region", "ARGENTINA");
             
-            Vino vino6 = new Vino(2023, new DateTime(2023, 07, 13), true, "Tinto", 7, 5000, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Rincon del Sabor,", 200, "Nombre region", "Descripcion region", "ARGENTINA");
+            Vino vino6 = new Vino(2023, new DateTime(2023, 07, 13), true, "El Enemigo", 7, 28791, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "La Aleanna,", 200, "Gualtallary, Valle de Uco", "Descripcion region", "ARGENTINA");
             
-            Vino vino7 = new Vino(2023, new DateTime(2023, 07, 13), true, "Toro", 7, 5000, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Rincon del Sabor,", 200, "Nombre region", "Descripcion region", "ARGENTINA");
+            Vino vino7 = new Vino(2023, new DateTime(2023, 07, 13), true, "Luigi Bosca De Sangre", 7, 19579, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", " Finca El Paraíso - Bodega Luigi Bosca,", 200, "Maipú", "Descripcion region", "ARGENTINA");
             
-            Vino vino8 = new Vino(2023, new DateTime(2023, 07, 13), true, "Chijuana", 7, 5000, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Rincon del Sabor,", 200, "Nombre region", "Descripcion region", "ARGENTINA");
+            Vino vino8 = new Vino(2023, new DateTime(2023, 07, 13), true, "Quimerino Tinto", 7, 35000, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Achaval Ferrer,", 200, "Luján de Cuyo y Valle de Uco", "Descripcion region", "ARGENTINA");
             
-            Vino vino9 = new Vino(2023, new DateTime(2023, 07, 13), true, "Sabor", 7, 5000, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Rincon del Sabor,", 200, "Nombre region", "Descripcion region", "ARGENTINA");
+            Vino vino9 = new Vino(2023, new DateTime(2023, 07, 13), true, "Viña Cobos", 7, 34320, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Viña Cobos,", 200, "Luján de Cuyo y Valle de Uco", "Descripcion region", "ARGENTINA");
             
-            Vino vino10 = new Vino(2023, new DateTime(2023, 07, 13), true, "El Viejo", 7, 5000, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Rincon del Sabor,", 200, "Nombre region", "Descripcion region", "ARGENTINA");
+            Vino vino10 = new Vino(2023, new DateTime(2023, 07, 13), true, "Zuccardi", 7, 24901, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Zuccardi,", 200, "Valle de Uco", "Descripcion region", "ARGENTINA");
             
-            Varietal var1 = new Varietal("Descripcion Varietal", 20);
+            Varietal var1 = new Varietal("Torrontés", 25); //v5
 
-            Varietal var2 = new Varietal("Descripcion Varietal", 20);
+            Varietal var2 = new Varietal("Chañares Estate Malbec", 20); //viñacobosv9
 
-            Varietal var3 = new Varietal("Descripcion Varietal", 20);
+            Varietal var3 = new Varietal("Felino Red Blend", 20); //viñacobos v9
 
-            Varietal var4 = new Varietal("Descripcion Varietal", 20);
+            Varietal var4 = new Varietal("Bonarda", 15); //zuccardi v10
 
-            Varietal var5 = new Varietal("Descripcion Varietal", 20);
+            Varietal var5 = new Varietal("Cabernet Sauvignon", 13);//zuccardi v10 // Susana Balbo v4 Salentein v3
 
-            Varietal var6 = new Varietal("Descripcion Varietal", 20);
+            Varietal var6 = new Varietal("Malbec", 20); //Susana Balbo v4 Salentein v3 v2 v1
 
-            Varietal var7 = new Varietal("Descripcion Varietal", 20);
+            Varietal var7 = new Varietal("Merlot", 20); //Salentein v3 v1
 
-            Varietal var8 = new Varietal("Descripcion Varietal", 20);
+            Varietal var8 = new Varietal("Chardonnay", 20);//Salentein v3 v1
 
-            Varietal var9 = new Varietal("Descripcion Varietal", 20);
+            Varietal var9 = new Varietal("Cabernet Franc", 20);
 
-            Varietal var10 = new Varietal("Descripcion Varietal", 20);
+            Varietal var10 = new Varietal("Petit Verdot", 20);
+            
 
             Reseña res1 = new Reseña("Comentario Reseñas", true, new DateTime(2023, 07, 13), 9);
             Reseña res2 = new Reseña("Comentario Reseñas", true, new DateTime(2023, 07, 13), 9);
@@ -254,16 +255,36 @@ namespace PPAI20243K6.Clases
             Reseña res9 = new Reseña("Comentario Reseñas", true, new DateTime(2023, 07, 13), 9);
             Reseña res10 = new Reseña("Comentario Reseñas", true, new DateTime(2023, 07, 13), 9);
 
-            vino1.agregarVarietal(var1);
-            vino2.agregarVarietal(var2);
-            vino3.agregarVarietal(var3);
-            vino4.agregarVarietal(var4);
-            vino5.agregarVarietal(var5);
-            vino6.agregarVarietal(var6);
-            vino6.agregarVarietal(var7);
-            vino7.agregarVarietal(var9);
+            vino1.agregarVarietal(var6);
+            vino1.agregarVarietal(var7);
+            vino1.agregarVarietal(var8);
+
+            vino2.agregarVarietal(var6);
+
+            vino3.agregarVarietal(var5);
+            vino3.agregarVarietal(var6);
+            vino3.agregarVarietal(var7);
+            vino3.agregarVarietal(var8);
+
+            vino4.agregarVarietal(var5);
+            vino4.agregarVarietal(var6);
+
+            vino5.agregarVarietal(var1);
+
+            vino6.agregarVarietal(var9);
+
+            vino7.agregarVarietal(var6);
+
+            vino8.agregarVarietal(var6);
+            vino8.agregarVarietal(var9);
+            vino8.agregarVarietal(var7);
+            vino8.agregarVarietal(var5);
             vino8.agregarVarietal(var10);
-            vino9.agregarVarietal(var4);
+
+            vino9.agregarVarietal(var2);
+            vino9.agregarVarietal(var3);
+
+            vino10.agregarVarietal(var4);
             vino10.agregarVarietal(var5);
 
             vino1.agregarReseña(res1);
