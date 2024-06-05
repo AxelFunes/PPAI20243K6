@@ -16,6 +16,7 @@ namespace PPAI20243K6.Clases
         public bool fechasValidas;
         List<Vino> arrayVinos = new List<Vino>();
         List<Vino> vinosConReseña = new List<Vino>();
+        List<int> arrPuntajes = new List<int>();
 
         private float precioVino;
         private string nombreVino;
@@ -303,6 +304,7 @@ namespace PPAI20243K6.Clases
                 datosBodega = vinosConReseña[i].buscarBodega();
                 varietal = vinosConReseña[i].buscarVarietal();
                 calificacionGral = vinosConReseña[i].getPromedio();
+                arrPuntajes = vinosConReseña[i].getArrayPuntajes();
 
                 if (tipoVis == "pantalla")
                 {
@@ -324,6 +326,10 @@ namespace PPAI20243K6.Clases
                     DataGridViewTextBoxCell datoVarietal = new DataGridViewTextBoxCell();
                     datoVarietal.Value = varietal;
                     fila.Cells.Add(datoVarietal);
+
+                    DataGridViewTextBoxCell puntajes = new DataGridViewTextBoxCell();
+                    puntajes.Value = arrPuntajes;
+                    fila.Cells.Add(puntajes);
 
                     PantallaAsociada.agregarFilaGrd(fila);
 
@@ -352,6 +358,8 @@ namespace PPAI20243K6.Clases
             }
 
         }
+
+
 
         public void FinCU()
         {

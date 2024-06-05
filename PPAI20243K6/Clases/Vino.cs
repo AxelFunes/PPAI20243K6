@@ -22,8 +22,9 @@ namespace PPAI20243K6.Clases
         private List<Varietal> Varietal;
         private Bodega Bodega;
         private double promedio;
-        
-        
+        List<int> puntajes = new List<int>();
+
+
 
         public Vino(int añada, DateTime fechaActualizacion, bool imagenEtiqueta, string nombre, int notaCata, float precioARS, string coordUbicacionBodega, string descripBodega, string historiaBodega, string nombreBodega, int periodoActualizacionBodega,string nombreReg, string descripcionReg, string nomPais)
         {
@@ -153,6 +154,23 @@ namespace PPAI20243K6.Clases
             }
 
             return suma / puntajes.Count;
+        }
+        public List<int> getArrayPuntajes()
+        {
+            // Implementación del método para obtener los puntajes de las reseñas
+            List<int> puntajes = new List<int>();
+
+            for (int i = 0; i < this.Reseñas.Count; i++)
+            {
+                puntajes.Add(this.Reseñas[i].getPuntaje());
+            }
+
+            if (puntajes == null || puntajes.Count == 0)
+            {
+                throw new ArgumentException("La lista no puede estar vacía o ser nula");
+            }
+
+            return puntajes;
         }
     }
 }
