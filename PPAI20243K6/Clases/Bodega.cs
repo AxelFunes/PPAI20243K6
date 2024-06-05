@@ -14,7 +14,7 @@ namespace PPAI20243K6.Clases
         private string historia { get; set; }
         private string nombre { get; set; }
         private int periodoActualizacion { get; set; }
-        private List<Reseña> Reseñas;
+        //private List<Reseña> Reseñas;
         private RegionVitivinicola regionVitivinicola;
 
         public Bodega(string coordUbicacionBodega, string descripBodega, string historiaBodega, string nombreBodega, int periodoActualizacionBodega, string nombreReg, string descripcionReg, string nomPais)
