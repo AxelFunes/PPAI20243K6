@@ -147,71 +147,15 @@ namespace PPAI20243K6.Clases
             {
                 arrayVinos = new List<Vino>();
             }
-            Vino vino1 = new Vino
-                (2023,
-                new DateTime(2023,07,13),
-                true,
-                "Norton",
-                7,
-                2850,
-                "192.233.22" ,
-                "Ubicada en el corazón del encantador barrio de San Telmo," +
-                " \"El Rincón del Sabor\" es una bodega que transporta a sus " +
-                "visitantes a una época donde la tradición y la calidad eran la norma.",
-                "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" +
-                " a Argentina con sueños de traer consigo un pedazo de su tierra natal," +
-                " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" +
-                " barrio de San Telmo.",
-                "Norton," ,
-                200, "Luján de Cuyo", "Descripcion region", "ARGENTINA");
-            Vino vino2 = new Vino(2023,
-                new DateTime(2023, 07, 13),
-                true,
-                "Trapiche",
-                7,
-                6050,
-                "192.233.22",
-                "Ubicada en el corazón del encantador barrio de San Telmo," +
-                " \"El Rincón del Sabor\" es una bodega que transporta a sus " +
-                "visitantes a una época donde la tradición y la calidad eran la norma.",
-                "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" +
-                " a Argentina con sueños de traer consigo un pedazo de su tierra natal," +
-                " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" +
-                " barrio de San Telmo.",
-                "Bodega Trapiche,",
-                200, "Maipú y Valle de Uco", "Descripcion region", "ARGENTINA");
-            Vino vino3 = new Vino(2023,
-                new DateTime(2023, 07, 13),
-                true,
-                "PORTILLO",
-                7,
-                7776,
-                "192.233.22",
-                "Ubicada en el corazón del encantador barrio de San Telmo," +
-                " \"El Rincón del Sabor\" es una bodega que transporta a sus " +
-                "visitantes a una época donde la tradición y la calidad eran la norma.",
-                "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" +
-                " a Argentina con sueños de traer consigo un pedazo de su tierra natal," +
-                " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" +
-                " barrio de San Telmo.",
-                "Salentein,",
-                200, "Valle de Uco", "Descripcion region", "ARGENTINA");
-            Vino vino4 = new Vino(2023,
-                new DateTime(2023, 07, 13),
-                true,
-                "Susana Balbo",
-                7,
-                16694,
-                "192.233.22",
-                "Ubicada en el corazón del encantador barrio de San Telmo," +
-                " \"El Rincón del Sabor\" es una bodega que transporta a sus " +
-                "visitantes a una época donde la tradición y la calidad eran la norma.",
-                "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" +
-                " a Argentina con sueños de traer consigo un pedazo de su tierra natal," +
-                " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" +
-                " barrio de San Telmo.",
-                "Susana Balbo Wine,",
-                200, "Luján de Cuyo y Valle de Uco", "Descripcion region", "ARGENTINA");
+            //En esta parte del codigo lo que hacemos es instanciar la clase Vino con los diferentes vinos con sus atributos
+            Vino vino1 = new Vino(2023, new DateTime(2023, 07, 13), true, "Norton", 7, 2850, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo, \"El Rincón del Sabor\" es una bodega que transporta a sus visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó a Argentina con sueños de traer consigo un pedazo de su tierra natal, la bodega ha sido un testigo silencioso del crecimiento y la evolución del barrio de San Telmo.", "Norton,", 200, "Luján de Cuyo", "Descripcion region", "ARGENTINA");
+
+            Vino vino2 = new Vino(2023, new DateTime(2023, 07, 13), true, "Trapiche", 7, 6050, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo, \"El Rincón del Sabor\" es una bodega que transporta a sus visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó a Argentina con sueños de traer consigo un pedazo de su tierra natal, la bodega ha sido un testigo silencioso del crecimiento y la evolución del barrio de San Telmo.", "Bodega Trapiche,", 200, "Maipú y Valle de Uco", "Descripcion region", "ARGENTINA");
+
+            Vino vino3 = new Vino(2023, new DateTime(2023, 07, 13), true, "PORTILLO", 7, 7776, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo, \"El Rincón del Sabor\" es una bodega que transporta a sus visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó a Argentina con sueños de traer consigo un pedazo de su tierra natal, la bodega ha sido un testigo silencioso del crecimiento y la evolución del barrio de San Telmo.", "Salentein,", 200, "Valle de Uco", "Descripcion region", "ARGENTINA");
+
+            Vino vino4 = new Vino(2023, new DateTime(2023, 07, 13), true, "Susana Balbo", 7, 16694, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo, \"El Rincón del Sabor\" es una bodega que transporta a sus visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó a Argentina con sueños de traer consigo un pedazo de su tierra natal, la bodega ha sido un testigo silencioso del crecimiento y la evolución del barrio de San Telmo.", "Susana Balbo Wine,", 200, "Luján de Cuyo y Valle de Uco", "Descripcion region", "ARGENTINA");
+
             Vino vino5 = new Vino(2023, new DateTime(2023, 07, 13), true, "Santa Julia", 7, 5000, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Santa Julia,", 200, "Maipú y Valle de Uco", "Descripcion region", "ARGENTINA");
             
             Vino vino6 = new Vino(2023, new DateTime(2023, 07, 13), true, "El Enemigo", 7, 28791, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "La Aleanna,", 200, "Gualtallary, Valle de Uco", "Descripcion region", "ARGENTINA");
@@ -224,6 +168,7 @@ namespace PPAI20243K6.Clases
             
             Vino vino10 = new Vino(2023, new DateTime(2023, 07, 13), true, "Zuccardi", 7, 24901, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Zuccardi,", 200, "Valle de Uco", "Descripcion region", "ARGENTINA");
             
+            //Instanciamos la clase Varietal y creamos los distintos varietales
             Varietal var1 = new Varietal("Torrontés", 25); //v5
 
             Varietal var2 = new Varietal("Chañares Estate Malbec", 20); //viñacobosv9
@@ -243,19 +188,36 @@ namespace PPAI20243K6.Clases
             Varietal var9 = new Varietal("Cabernet Franc", 20);
 
             Varietal var10 = new Varietal("Petit Verdot", 20);
-            
 
-            Reseña res1 = new Reseña("Comentario Reseñas", true, new DateTime(2023, 07, 13), 9);
-            Reseña res2 = new Reseña("Comentario Reseñas", true, new DateTime(2023, 07, 13), 9);
-            Reseña res3 = new Reseña("Comentario Reseñas", true, new DateTime(2023, 07, 13), 9);
-            Reseña res4 = new Reseña("Comentario Reseñas", true, new DateTime(2023, 07, 13), 9);
-            Reseña res5 = new Reseña("Comentario Reseñas", false, new DateTime(2023, 07, 13), 2);
-            Reseña res6 = new Reseña("Comentario Reseñas", true, new DateTime(2023, 07, 13), 9);
-            Reseña res7 = new Reseña("Comentario Reseñas", true, new DateTime(2023, 07, 13), 9);
-            Reseña res8 = new Reseña("Comentario Reseñas", true, new DateTime(2023, 07, 13), 9);
-            Reseña res9 = new Reseña("Comentario Reseñas", true, new DateTime(2023, 07, 13), 9);
-            Reseña res10 = new Reseña("Comentario Reseñas", true, new DateTime(2023, 07, 13), 9);
+            //Instanciamos la clase reseña e indicamos sus valores
+            Reseña res1 = new Reseña("¡Excelente vino! Rico aroma y sabor a frutas.", true, new DateTime(2024, 01, 05), 9);
+            Reseña res2 = new Reseña("Un vino suave y elegante, perfecto para una cena romántica.", true, new DateTime(2024, 01, 10), 8);
+            Reseña res3 = new Reseña("Impresionante calidad. Sin duda, lo compraré de nuevo.", true, new DateTime(2024, 01, 15), 10);
+            Reseña res4 = new Reseña("Sabor equilibrado, me dejó una sensación muy agradable.", true, new DateTime(2024, 01, 20), 9);
+            Reseña res5 = new Reseña("¡Un vino excepcional! Mi nuevo favorito sin duda alguna.", true, new DateTime(2024, 01, 25), 10);
+            Reseña res6 = new Reseña("Me sorprendió gratamente este vino, superó mis expectativas.", true, new DateTime(2024, 02, 01), 9);
+            Reseña res7 = new Reseña("Buena relación calidad-precio. Lo recomendaría a amigos.", true, new DateTime(2024, 02, 05), 7);
+            Reseña res8 = new Reseña("Un vino muy versátil, perfecto para cualquier ocasión.", true, new DateTime(2024, 02, 10), 8);
+            Reseña res9 = new Reseña("Excelente servicio al cliente y un vino de alta calidad.", true, new DateTime(2024, 02, 15), 9);
+            Reseña res10 = new Reseña("Este vino es una joya oculta, ¡definitivamente lo recomiendo!", true, new DateTime(2024, 02, 20), 9);
+            Reseña res11 = new Reseña("Gran vino, excelente relación calidad-precio.", true, new DateTime(2024, 01, 05), 8);
+            Reseña res12 = new Reseña("Un vino excepcional, definitivamente volvería a comprarlo.", true, new DateTime(2024, 01, 10), 9);
+            Reseña res13 = new Reseña("Buen vino, pero un poco caro para mi gusto.", true, new DateTime(2024, 01, 15), 7);
+            Reseña res14 = new Reseña("¡Increíble! Este vino superó todas mis expectativas.", true, new DateTime(2024, 01, 20), 10);
+            Reseña res15 = new Reseña("No me gustó mucho, esperaba más por el precio.", true, new DateTime(2024, 01, 25), 5);
+            Reseña res16 = new Reseña("Una experiencia decepcionante, no recomendaría este vino.", true, new DateTime(2024, 02, 05), 3);
+            Reseña res17 = new Reseña("Para ser sincero, este vino no valió la pena.", true, new DateTime(2024, 02, 10), 4);
+            Reseña res18 = new Reseña("Un vino decente, pero hay opciones mejores por ahí.", true, new DateTime(2024, 02, 15), 6);
+            Reseña res19 = new Reseña("¡Fantástico! Definitivamente uno de mis vinos favoritos.", true, new DateTime(2024, 02, 20), 9);
+            Reseña res20 = new Reseña("No me impresionó mucho, esperaba más sabor.", true, new DateTime(2024, 02, 25), 6);
+            Reseña res21 = new Reseña("Buen vino para ocasiones especiales, lo recomendaría.", false, new DateTime(2024, 03, 05), 7); //NO PREMIUM
+            Reseña res22 = new Reseña("No soy un gran fan de este vino, prefiero otros.", false, new DateTime(2024, 03, 10), 4);//NO PREMIUM
+            Reseña res23 = new Reseña("Buena relación calidad-precio, pero no es excepcional.", false, new DateTime(2024, 03, 15), 6);//NO PREMIUM
+            Reseña res24 = new Reseña("Para mí, este vino fue una decepción total.", false, new DateTime(2024, 03, 20), 2);//NO PREMIUM
+            Reseña res25 = new Reseña("Excelente vino, definitivamente compraría de nuevo.", false, new DateTime(2024, 03, 25), 9);//NO PREMIUM
 
+
+            //Se le agrega a cada vino su varietal correspondiente
             vino1.agregarVarietal(var6);
             vino1.agregarVarietal(var7);
             vino1.agregarVarietal(var8);
@@ -289,17 +251,42 @@ namespace PPAI20243K6.Clases
             vino10.agregarVarietal(var5);
 
             vino1.agregarReseña(res1);
+            vino1.agregarReseña(res3);
             vino1.agregarReseña(res5);
+            vino1.agregarReseña(res7);
+
             vino2.agregarReseña(res2);
-            vino3.agregarReseña(res3);
-            vino4.agregarReseña(res4);
-            vino5.agregarReseña(res5);
-            vino6.agregarReseña(res6);
-            vino6.agregarReseña(res7);
-            vino7.agregarReseña(res9);
-            vino8.agregarReseña(res10);
-            vino9.agregarReseña(res4);
-            vino10.agregarReseña(res5);
+            vino2.agregarReseña(res4);
+            vino2.agregarReseña(res6);
+
+            vino3.agregarReseña(res8);
+            vino3.agregarReseña(res10);
+
+            vino4.agregarReseña(res9);
+            vino4.agregarReseña(res11);
+            vino4.agregarReseña(res13);
+
+            vino5.agregarReseña(res12);
+            vino5.agregarReseña(res14);
+
+            vino6.agregarReseña(res15);
+            vino6.agregarReseña(res17);
+            vino6.agregarReseña(res19);
+
+            vino7.agregarReseña(res16);
+            vino7.agregarReseña(res18);
+            vino7.agregarReseña(res20);
+
+            vino8.agregarReseña(res21);//NO PREMIUM
+            vino8.agregarReseña(res23);//NO PREMIUM
+
+            vino9.agregarReseña(res22);//NO PREMIUM
+            vino9.agregarReseña(res24);//NO PREMIUM
+            vino9.agregarReseña(res25);//NO PREMIUM
+
+            vino10.agregarReseña(res25);//NO PREMIUM
+
+            //OSEA QUE POR PANTALLA ESTA MOSTRANDO 7 VINOS, YA QUE HAY 3 QUE TIENEN RESEÑAS NO PREMIUM!!
 
             //Agregamos los vinos al array
 
@@ -314,10 +301,8 @@ namespace PPAI20243K6.Clases
             arrayVinos.Add(vino9);
             arrayVinos.Add(vino10);
 
-            //List<Vino> vinosConReseña = new List<Vino>();
-           
-
-            //vinosConReseña = Vino.buscarVinosConReseñaB(arrayVinos, fechaDesde, fechaHasta);------------------
+            //Recorremos el array de vinos, para poder obtener los vinos con reseña utilizamos el metoo buscarVinosConReseña
+            //En caso que tengan una reseña con las fechas indicadas y sea premium, se crea un array nuevo de vinos con reseña
             for (int i = 0; i < arrayVinos.Count; i++)
             {
                 
@@ -329,9 +314,11 @@ namespace PPAI20243K6.Clases
                 }
           
             }
+            //Para los vinos llamamos los metodos para calcular el promedio de puntaje en el periodo y tambien los ordenamos por promedio
             calcularPromedioDeSommelierEnPeriodo(vinosConReseña);
             vinosConReseña=ordenarVinoPorPromedio(vinosConReseña);
 
+            //Se recorre el array de vinos con reseña, se obtienen los datos para poder luego mostrarlos por pantalla
             for (int i = 0; i < vinosConReseña.Count; i++)
             {
                 precioVino= vinosConReseña[i].getPrecio();
@@ -369,6 +356,7 @@ namespace PPAI20243K6.Clases
             
             //--------------
         }
+        //Metodo para ordenar el aray de vinos por puntaje promedio
         public List<Vino> ordenarVinoPorPromedio(List<Vino> vinos)
         {
             // Implementación del método para ordenar vino por promedio
@@ -377,6 +365,8 @@ namespace PPAI20243K6.Clases
 
             return listaOrdenada;
         }
+
+        //Metodo para calcular el promedio de puntaje de los vinos
         public void calcularPromedioDeSommelierEnPeriodo(List<Vino> vinos)
         {
             for (int i = 0; i < vinos.Count; i++)
