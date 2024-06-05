@@ -34,9 +34,7 @@ namespace PPAI20243K6.Clases
 
         public string buscarPais()
         {
-            string nom = this.paisP.getNombre();
-            // Implementación del método para buscar país
-            return nom;
+            return paisP.getNombre();
         }
     }
 }

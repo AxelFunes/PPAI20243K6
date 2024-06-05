@@ -21,6 +21,7 @@ namespace PPAI20243K6.Clases
         private string nombreVino;
         private string datosBodega;
         private string varietal;
+        private double calificacionGral;
 
 
         public GestorGenerarRankingVinos(PantallaRankingVinos pantalla)
@@ -337,19 +338,20 @@ namespace PPAI20243K6.Clases
                 nombreVino= vinosConReseña[i].getNombre();
                 datosBodega = vinosConReseña[i].buscarBodega();
                 varietal = vinosConReseña[i].buscarVarietal();
-                
+                calificacionGral = vinosConReseña[i].getPromedio();
+
                 if (tipoVis == "pantalla")
                 {
                     
                     DataGridViewRow fila = new DataGridViewRow();
+                    DataGridViewTextBoxCell nombre = new DataGridViewTextBoxCell();
+                    nombre.Value = nombreVino;
+                    fila.Cells.Add(nombre);
 
                     DataGridViewTextBoxCell precio = new DataGridViewTextBoxCell();
                     precio.Value = precioVino;
                     fila.Cells.Add(precio);
 
-                    DataGridViewTextBoxCell nombre = new DataGridViewTextBoxCell();
-                    nombre.Value = nombreVino;
-                    fila.Cells.Add(nombre);
 
                     DataGridViewTextBoxCell bodega = new DataGridViewTextBoxCell();
                     bodega.Value = datosBodega;

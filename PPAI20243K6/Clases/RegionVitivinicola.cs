@@ -28,9 +28,9 @@ namespace PPAI20243K6.Clases
             // Implementación del método para contar bodegas
             return 0;
         }
-        public void agregarProvincia( string nombre, string nomPais)
+        public void agregarProvincia( string nombreProv, string nomPais)
         {
-            this.provincia = new Provincia(nombre, nomPais);
+            this.provincia = new Provincia(nombreProv, nomPais);
         }
 
         public string getNombre()
@@ -43,10 +43,16 @@ namespace PPAI20243K6.Clases
         }
         public string buscarProvPais()
         {
-            //tira error porque no se agregaron provincias con paises ¡
-            string pais = "Tu puta madre";
-            //string pais= provincia.buscarPais();
-            return pais;
+            {
+                if (provincia != null)
+                {
+                    return provincia.buscarPais();
+                }
+                else
+                {
+                    return pais.getNombre();
+                }
+            }
         }
     }
 }

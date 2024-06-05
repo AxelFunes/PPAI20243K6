@@ -130,7 +130,7 @@ namespace PPAI20243K6.Clases
         {
             // Implementación del método para calcular puntaje promedio
             double promedio = calcularPuntajePromedio();
-            return promedio;
+            return Math.Round(promedio);
         }
         public double calcularPuntajePromedio()
         {
