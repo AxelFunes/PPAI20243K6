@@ -102,7 +102,7 @@ namespace PPAI20243K6
         public void tomarConfirmacion()
         {
             // Implementación del método para tomar confirmación
-            gestor.tomarConfirmacion(cmb_TipoReseña.SelectedText);
+            gestor.tomarConfirmacion(cmb_TipoReseña.Text, tipoVisualizacion);
         }
 
         public void informarGeneracionExitosa()
@@ -145,6 +145,12 @@ namespace PPAI20243K6
         {
             chk_pdf.Checked = false;
             chk_Excel.Checked = false;
+        }
+
+        public void agregarFilaGrd(DataGridViewRow fila)
+        {
+            //grdLlamada2.Rows.Clear();
+            dgv_reseñas.Rows.Add(fila);
         }
     }
 }

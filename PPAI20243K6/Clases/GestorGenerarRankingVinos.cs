@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PPAI20243K6.Clases
 {
@@ -18,8 +19,8 @@ namespace PPAI20243K6.Clases
 
         private float precioVino;
         private string nombreVino;
-        private string bodega;
-        private List<string> varietal;
+        private string datosBodega;
+        private string varietal;
 
 
         public GestorGenerarRankingVinos(PantallaRankingVinos pantalla)
@@ -98,7 +99,7 @@ namespace PPAI20243K6.Clases
             return tipoVis;
         }
 
-        public void tomarConfirmacion(string tipoReseña)
+        public void tomarConfirmacion(string tipoReseña, string tipoVisualizacion)
         {
             // Implementación del método para tomar confirmación
             bool premium = false;
@@ -106,10 +107,40 @@ namespace PPAI20243K6.Clases
             {
                 premium= true;
             }
-            buscarVinosReseñasPeriodo(premium);
+            buscarVinosReseñasPeriodo(premium, tipoVisualizacion);
+            /*
+            if (tipoVisualizacion== "pantalla")
+            {
+                foreach (var item in vinosConReseña)
+                {
+                    DataGridViewRow fila = new DataGridViewRow();
+
+                    DataGridViewTextBoxCell celdaId = new DataGridViewTextBoxCell();
+                    celdaId.Value = item.;
+                    fila.Cells.Add(celdaId);
+
+                    DataGridViewTextBoxCell celdaCliente = new DataGridViewTextBoxCell();
+                    celdaCliente.Value = datosLlamadaSeleccionada[0];
+                    fila.Cells.Add(celdaCliente);
+
+                    DataGridViewTextBoxCell celdaEstadoActual = new DataGridViewTextBoxCell();
+                    celdaEstadoActual.Value = datosLlamadaSeleccionada[1];
+                    fila.Cells.Add(celdaEstadoActual);
+
+                    DataGridViewTextBoxCell celdaDuracion = new DataGridViewTextBoxCell();
+                    celdaDuracion.Value = datosLlamadaSeleccionada[2];
+                    fila.Cells.Add(celdaDuracion);
+
+                    DataGridViewTextBoxCell celdaDescEnc = new DataGridViewTextBoxCell();
+                    celdaDescEnc.Value = descEncuesta;
+                    fila.Cells.Add(celdaDescEnc);
+                }
+            }
+            */
+
         }
 
-        public void buscarVinosReseñasPeriodo(bool premium)
+        public void buscarVinosReseñasPeriodo(bool premium, string tipoVis)
         {
             if (arrayVinos == null)
             {
@@ -119,7 +150,7 @@ namespace PPAI20243K6.Clases
                 (2023,
                 new DateTime(2023,07,13),
                 true,
-                "Santa Julia",
+                "Santa Ver",
                 7,
                 5000,
                 "192.233.22" ,
@@ -151,7 +182,7 @@ namespace PPAI20243K6.Clases
             Vino vino3 = new Vino(2023,
                 new DateTime(2023, 07, 13),
                 true,
-                "Santa Julia",
+                "Romioli",
                 7,
                 5000,
                 "192.233.22",
@@ -167,7 +198,7 @@ namespace PPAI20243K6.Clases
             Vino vino4 = new Vino(2023,
                 new DateTime(2023, 07, 13),
                 true,
-                "Santa Julia",
+                "Santa Dani",
                 7,
                 5000,
                 "192.233.22",
@@ -182,15 +213,15 @@ namespace PPAI20243K6.Clases
                 200, "Nombre region", "Descripcion region", "ARGENTINA");
             Vino vino5 = new Vino(2023, new DateTime(2023, 07, 13), true, "Santa Julia", 7, 5000, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Rincon del Sabor,", 200, "Nombre region", "Descripcion region", "ARGENTINA");
             
-            Vino vino6 = new Vino(2023, new DateTime(2023, 07, 13), true, "Santa Julia", 7, 5000, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Rincon del Sabor,", 200, "Nombre region", "Descripcion region", "ARGENTINA");
+            Vino vino6 = new Vino(2023, new DateTime(2023, 07, 13), true, "Tinto", 7, 5000, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Rincon del Sabor,", 200, "Nombre region", "Descripcion region", "ARGENTINA");
             
-            Vino vino7 = new Vino(2023, new DateTime(2023, 07, 13), true, "Santa Julia", 7, 5000, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Rincon del Sabor,", 200, "Nombre region", "Descripcion region", "ARGENTINA");
+            Vino vino7 = new Vino(2023, new DateTime(2023, 07, 13), true, "Toro", 7, 5000, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Rincon del Sabor,", 200, "Nombre region", "Descripcion region", "ARGENTINA");
             
-            Vino vino8 = new Vino(2023, new DateTime(2023, 07, 13), true, "Santa Julia", 7, 5000, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Rincon del Sabor,", 200, "Nombre region", "Descripcion region", "ARGENTINA");
+            Vino vino8 = new Vino(2023, new DateTime(2023, 07, 13), true, "Chijuana", 7, 5000, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Rincon del Sabor,", 200, "Nombre region", "Descripcion region", "ARGENTINA");
             
-            Vino vino9 = new Vino(2023, new DateTime(2023, 07, 13), true, "Santa Julia", 7, 5000, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Rincon del Sabor,", 200, "Nombre region", "Descripcion region", "ARGENTINA");
+            Vino vino9 = new Vino(2023, new DateTime(2023, 07, 13), true, "Sabor", 7, 5000, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Rincon del Sabor,", 200, "Nombre region", "Descripcion region", "ARGENTINA");
             
-            Vino vino10 = new Vino(2023, new DateTime(2023, 07, 13), true, "Santa Julia", 7, 5000, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Rincon del Sabor,", 200, "Nombre region", "Descripcion region", "ARGENTINA");
+            Vino vino10 = new Vino(2023, new DateTime(2023, 07, 13), true, "El Viejo", 7, 5000, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Rincon del Sabor,", 200, "Nombre region", "Descripcion region", "ARGENTINA");
             
             Varietal var1 = new Varietal("Descripcion Varietal", 20);
 
@@ -283,9 +314,33 @@ namespace PPAI20243K6.Clases
             {
                 precioVino= vinosConReseña[i].getPrecio();
                 nombreVino= vinosConReseña[i].getNombre();
-                bodega = vinosConReseña[i].buscarBodega();
+                datosBodega = vinosConReseña[i].buscarBodega();
                 varietal = vinosConReseña[i].buscarVarietal();
+                
+                if (tipoVis == "pantalla")
+                {
+                    
+                    DataGridViewRow fila = new DataGridViewRow();
 
+                    DataGridViewTextBoxCell precio = new DataGridViewTextBoxCell();
+                    precio.Value = precioVino;
+                    fila.Cells.Add(precio);
+
+                    DataGridViewTextBoxCell nombre = new DataGridViewTextBoxCell();
+                    nombre.Value = nombreVino;
+                    fila.Cells.Add(nombre);
+
+                    DataGridViewTextBoxCell bodega = new DataGridViewTextBoxCell();
+                    bodega.Value = datosBodega;
+                    fila.Cells.Add(bodega);
+
+                    DataGridViewTextBoxCell datoVarietal = new DataGridViewTextBoxCell();
+                    datoVarietal.Value = varietal;
+                    fila.Cells.Add(datoVarietal);
+
+                    PantallaAsociada.agregarFilaGrd(fila);
+
+                }
 
             }
             

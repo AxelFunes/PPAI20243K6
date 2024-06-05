@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
@@ -31,6 +32,12 @@ namespace PPAI20243K6.Clases
             //Duracion = duracion;
             //EncuestaEnviada = encuestaEnviada;
             //ObservacionAuditor = observAuditor;
+            this.añada = añada;
+            this.fechaActualizacion = fechaActualizacion;
+            this.imagenEtiqueta= imagenEtiqueta;
+            this.nombre= nombre;
+            this.notaDeCataBodega = notaCata;
+            this.precioARS = precioARS;
             Varietal= new List<Varietal>();
             Reseñas = new List<Reseña>();
             Bodega = new Bodega(coordUbicacionBodega, descripBodega, historiaBodega, nombreBodega, periodoActualizacionBodega, nombreReg, descripcionReg, nomPais);
@@ -52,16 +59,17 @@ namespace PPAI20243K6.Clases
         }
         public string getNombre()
         {
-            return this.nombre;
+            return nombre;
         }
-        public List<string> buscarVarietal()
+        public string buscarVarietal()
         {
             List<string> listDesc = new List<string>();
             foreach (var i in Varietal)
             {
                 listDesc.Add(i.getDescripcion());
             }
-            return listDesc;
+            string resultado = string.Join(", ", listDesc);
+            return resultado;
         }
         public string buscarBodega()
         {

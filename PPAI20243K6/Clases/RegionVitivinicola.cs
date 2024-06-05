@@ -43,7 +43,9 @@ namespace PPAI20243K6.Clases
         }
         public string buscarProvPais()
         {
-            string pais= provincia.buscarPais();
+            //tira error porque no se agregaron provincias con paises ¡
+            string pais = "Tu puta madre";
+            //string pais= provincia.buscarPais();
             return pais;
         }
     }
