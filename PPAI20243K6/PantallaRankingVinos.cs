@@ -94,6 +94,7 @@ namespace PPAI20243K6
 
         }
 
+
         public void solicitarConfirmacion()
         {
             // Implementación del método para solicitar confirmación
