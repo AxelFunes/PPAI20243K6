@@ -292,7 +292,7 @@ namespace PPAI20243K6.Clases
           
             }
             //Para los vinos llamamos los metodos para calcular el promedio de puntaje en el periodo y tambien los ordenamos por promedio
-            calcularPromedioDeSommelierEnPeriodo(vinosConReseña);
+            calcularPromedioDeSommelierEnPeriodo(vinosConReseña, premium);
             vinosConReseña=ordenarVinoPorPromedio(vinosConReseña);
 
             //Se recorre el array de vinos con reseña, se obtienen los datos para poder luego mostrarlos por pantalla
@@ -354,11 +354,11 @@ namespace PPAI20243K6.Clases
         }
 
         //Metodo para calcular el promedio de puntaje de los vinos
-        public void calcularPromedioDeSommelierEnPeriodo(List<Vino> vinos)
+        public void calcularPromedioDeSommelierEnPeriodo(List<Vino> vinos, bool premium)
         {
             for (int i = 0; i < vinos.Count; i++)
             {
-                vinos[i].setPromedio(vinos[i].calcularPromedioDeSommelierEnPeriodo()); 
+                vinos[i].setPromedio(vinos[i].calcularPromedioDeSommelierEnPeriodo(premium)); 
             }
 
         }

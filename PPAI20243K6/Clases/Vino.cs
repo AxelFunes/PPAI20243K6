@@ -130,32 +130,55 @@ namespace PPAI20243K6.Clases
             return reseñaValida;
 
         }
-        public double calcularPromedioDeSommelierEnPeriodo()
+        public double calcularPromedioDeSommelierEnPeriodo(bool premium)
         {
             // Implementación del método para calcular puntaje promedio
-            double promedio = calcularPuntajePromedio();
-            return Math.Round(promedio);
+            double promedio = calcularPuntajePromedio(premium);
+            return Math.Round(promedio, 1);
         }
-        public double calcularPuntajePromedio()
+        public double calcularPuntajePromedio(bool premium)
         {
             // Implementación del método para calcular puntaje promedio
             List<int> puntajes = new List<int>();
+            List<int> puntajesNoPremium = new List<int>();
             for (int i = 0; i < this.Reseñas.Count; i++)
             {
-                puntajes.Add(this.Reseñas[i].getPuntaje());                                  
+                if (Reseñas[i].esPremium)//== premium)
+                {
+                    puntajes.Add(this.Reseñas[i].getPuntaje());
+                }
+                else
+                {
+                    puntajesNoPremium.Add(this.Reseñas[i].getPuntaje());
+                }
+                                                  
             }
             if (puntajes == null || puntajes.Count == 0)
             {
-                throw new ArgumentException("La lista no puede estar vacía o ser nula");
+                //throw new ArgumentException("La lista no puede estar vacía o ser nula");
             }
 
             double suma = 0;
-            foreach (double numero in puntajes)
+            double prom = 0;
+            if (premium)
             {
-                suma += numero;
+                foreach (double numero in puntajes)
+                {
+                    suma += numero;
+                }
+                prom= suma / puntajes.Count;
+            }
+            else
+            {
+                foreach (double numero in puntajesNoPremium)
+                {
+                    suma += numero;
+                }
+                prom = suma / puntajesNoPremium.Count;
             }
 
-            return suma / puntajes.Count;
+
+            return prom;
         }
         public string getArrayPuntajes(bool premium)
         {
@@ -179,7 +202,7 @@ namespace PPAI20243K6.Clases
 
             if (puntajes == null || puntajes.Count == 0)
             {
-                throw new ArgumentException("La lista no puede estar vacía o ser nula");
+                //throw new ArgumentException("La lista no puede estar vacía o ser nula");
             }
 
             string resultado;
