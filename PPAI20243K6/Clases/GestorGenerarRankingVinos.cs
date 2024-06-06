@@ -145,6 +145,12 @@ namespace PPAI20243K6.Clases
 
             Vino vino10 = new Vino(2023, new DateTime(2023, 07, 13), true, "Zuccardi", 7, 24901, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Zuccardi,", 200, "Valle de Uco", "Descripcion region", "ARGENTINA");
 
+            Vino vino11 = new Vino(2023, new DateTime(2023, 07, 13), true, "Vino Toro", 7, 2000, "192.233.22", "Ubicada en el corazón de Argentina del buen sabor," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un ARGENTINO PURO que llegó" + " con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Vino Toro,", 200, "Sabra dios", "Descripcion region", "ARGENTINA");
+
+            Vino vino12 = new Vino(2023, new DateTime(2023, 07, 13), true, "Zumua", 7, 800, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Zumua,", 200, "El lugar mas recondito", "Descripcion region", "ARGENTINA");
+            
+            Vino vino13 = new Vino(2023, new DateTime(2023, 07, 13), true, "Termidor", 7, 1500, "192.233.22", "Ubicada en el corazón del encantador barrio de San Telmo," + " \"El Rincón del Sabor\" es una bodega que transporta a sus " + "visitantes a una época donde la tradición y la calidad eran la norma.", "Fundada en 1952 por Don Manuel Rivera, un inmigrante español que llegó" + " a Argentina con sueños de traer consigo un pedazo de su tierra natal," + " la bodega ha sido un testigo silencioso del crecimiento y la evolución del" + " barrio de San Telmo.", "Termidor,", 200, "De donde vino terminator", "Descripcion region", "ARGENTINA");
+
             //Instanciamos la clase Varietal y creamos los distintos varietales
             Varietal var1 = new Varietal("Torrontés", 25); //v5
 
@@ -192,9 +198,11 @@ namespace PPAI20243K6.Clases
             Reseña res23 = new Reseña("Buena relación calidad-precio, pero no es excepcional.", false, new DateTime(2024, 03, 15), 6);//NO PREMIUM
             Reseña res24 = new Reseña("Para mí, este vino fue una decepción total.", false, new DateTime(2024, 03, 20), 2);//NO PREMIUM
             Reseña res25 = new Reseña("Excelente vino, definitivamente compraría de nuevo.", false, new DateTime(2024, 03, 25), 9);//NO PREMIUM
+            Reseña res26 = new Reseña("Malardo, hasta con rexona te abandona.", true, new DateTime(2024, 03, 25), 1);// PREMIUM
+            Reseña res27 = new Reseña("Fiel, el que te salva las papas.", true, new DateTime(2024, 03, 25), 9);// PREMIUM
 
 
-            //Se le agrega a cada vino su varietal correspondiente
+                //Se le agrega a cada vino su varietal correspondiente
             vino1.agregarVarietal(var6);
             vino1.agregarVarietal(var7);
             vino1.agregarVarietal(var8);
@@ -227,6 +235,14 @@ namespace PPAI20243K6.Clases
             vino10.agregarVarietal(var4);
             vino10.agregarVarietal(var5);
 
+            vino11.agregarVarietal(var6);
+
+            vino12.agregarVarietal(var6);
+            vino12.agregarVarietal(var1);
+            
+            vino13.agregarVarietal(var6);
+
+                //Se agregan reseñas
             vino1.agregarReseña(res1);
             vino1.agregarReseña(res3);
             vino1.agregarReseña(res5);
@@ -264,6 +280,13 @@ namespace PPAI20243K6.Clases
 
             vino10.agregarReseña(res25);//NO PREMIUM
 
+            vino11.agregarReseña(res27);
+
+            vino12.agregarReseña(res26);
+            vino12.agregarReseña(res15);
+
+            vino13.agregarReseña(res27);
+
             //OSEA QUE POR PANTALLA ESTA MOSTRANDO 7 VINOS, YA QUE HAY 3 QUE TIENEN RESEÑAS NO PREMIUM!!
 
             //Agregamos los vinos al array
@@ -278,6 +301,9 @@ namespace PPAI20243K6.Clases
             arrayVinos.Add(vino8);
             arrayVinos.Add(vino9);
             arrayVinos.Add(vino10);
+            arrayVinos.Add(vino11);
+            arrayVinos.Add(vino12);
+            arrayVinos.Add(vino13);
 
             }
             //Recorremos el array de vinos, para poder obtener los vinos con reseña utilizamos el metoo buscarVinosConReseña
@@ -377,12 +403,15 @@ namespace PPAI20243K6.Clases
                     }
 
                     // Guardar el archivo Excel
-                    string filePath = "C:/Users/Chaky/Desktop/RankingDeVinos.xlsx";
+                    string filePath = "C:/Users/GZ Tienda/Desktop/RankingDeVinos.xlsx";
                     workbook.SaveAs(filePath);
 
                     // Informar al usuario de que el archivo se ha guardado
                     MessageBox.Show($"El archivo Excel ha sido guardado en {filePath}", "Archivo Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    
                 }
+                FinCU();
             }
 
             //--------------
@@ -412,6 +441,7 @@ namespace PPAI20243K6.Clases
         public void FinCU()
         {
             // Implementación del método para finalizar el caso de uso
+            PantallaAsociada.Close();
         }
     }
 }
