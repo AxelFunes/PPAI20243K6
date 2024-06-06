@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ClosedXML.Excel;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -296,15 +298,16 @@ namespace PPAI20243K6.Clases
             vinosConReseña=ordenarVinoPorPromedio(vinosConReseña);
 
             //Se recorre el array de vinos con reseña, se obtienen los datos para poder luego mostrarlos por pantalla
-            for (int i = 0; i < vinosConReseña.Count; i++)
+            int j = 0;
+            while (j < vinosConReseña.Count && j < 10)
             {
-                promedioVino = vinosConReseña[i].getPromedio();
-                precioVino = vinosConReseña[i].getPrecio();
-                nombreVino= vinosConReseña[i].getNombre();
-                datosBodega = vinosConReseña[i].buscarBodega();
-                varietal = vinosConReseña[i].buscarVarietal();
-                calificacionGral = vinosConReseña[i].getPromedio();
-                arrPuntajes = vinosConReseña[i].getArrayPuntajes(premium);
+                promedioVino = vinosConReseña[j].getPromedio();
+                precioVino = vinosConReseña[j].getPrecio();
+                nombreVino= vinosConReseña[j].getNombre();
+                datosBodega = vinosConReseña[j].buscarBodega();
+                varietal = vinosConReseña[j].buscarVarietal();
+                calificacionGral = vinosConReseña[j].getPromedio();
+                arrPuntajes = vinosConReseña[j].getArrayPuntajes(premium);
 
                 if (tipoVis == "pantalla")
                 {
@@ -336,11 +339,52 @@ namespace PPAI20243K6.Clases
                     fila.Cells.Add(puntajes);
 
                     PantallaAsociada.agregarFilaGrd(fila);
-
                 }
-
+                
+                j++;
             }
-            
+            if (tipoVis == "excel")
+            {
+                using (var workbook = new XLWorkbook())
+                {
+                    var worksheet = workbook.Worksheets.Add("Ranking de Vinos");
+                    worksheet.Cell(1, 1).Value = "Promedio";
+                    worksheet.Cell(1, 2).Value = "Nombre Vino";
+                    worksheet.Cell(1, 3).Value = "Precio";
+                    worksheet.Cell(1, 4).Value = "Bodega";
+                    worksheet.Cell(1, 5).Value = "Varietal";
+                    worksheet.Cell(1, 6).Value = "Puntajes";
+
+                    int currentRow = 2;
+
+                    for (int i = 0; i < vinosConReseña.Count && i < 10; i++)
+                    {
+                        promedioVino = vinosConReseña[i].getPromedio();
+                        precioVino = vinosConReseña[i].getPrecio();
+                        nombreVino = vinosConReseña[i].getNombre();
+                        datosBodega = vinosConReseña[i].buscarBodega();
+                        varietal = vinosConReseña[i].buscarVarietal();
+                        arrPuntajes = vinosConReseña[i].getArrayPuntajes(premium);
+
+                        worksheet.Cell(currentRow, 1).Value = promedioVino;
+                        worksheet.Cell(currentRow, 2).Value = nombreVino;
+                        worksheet.Cell(currentRow, 3).Value = precioVino;
+                        worksheet.Cell(currentRow, 4).Value = datosBodega;
+                        worksheet.Cell(currentRow, 5).Value = varietal;
+                        worksheet.Cell(currentRow, 6).Value = arrPuntajes;
+
+                        currentRow++;
+                    }
+
+                    // Guardar el archivo Excel
+                    string filePath = "C:/Users/Chaky/Desktop/RankingDeVinos.xlsx";
+                    workbook.SaveAs(filePath);
+
+                    // Informar al usuario de que el archivo se ha guardado
+                    MessageBox.Show($"El archivo Excel ha sido guardado en {filePath}", "Archivo Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+
             //--------------
         }
         //Metodo para ordenar el aray de vinos por puntaje promedio

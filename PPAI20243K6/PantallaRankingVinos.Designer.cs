@@ -54,10 +54,9 @@
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(243, 577);
-            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConfirmar.Location = new System.Drawing.Point(182, 469);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(124, 42);
+            this.btnConfirmar.Size = new System.Drawing.Size(93, 34);
             this.btnConfirmar.TabIndex = 0;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = true;
@@ -66,12 +65,11 @@
             // lbl_FechaInicio
             // 
             this.lbl_FechaInicio.AutoSize = true;
-            this.lbl_FechaInicio.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_FechaInicio.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_FechaInicio.ForeColor = System.Drawing.Color.White;
-            this.lbl_FechaInicio.Location = new System.Drawing.Point(71, 83);
-            this.lbl_FechaInicio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_FechaInicio.Location = new System.Drawing.Point(53, 67);
             this.lbl_FechaInicio.Name = "lbl_FechaInicio";
-            this.lbl_FechaInicio.Size = new System.Drawing.Size(103, 24);
+            this.lbl_FechaInicio.Size = new System.Drawing.Size(87, 20);
             this.lbl_FechaInicio.TabIndex = 2;
             this.lbl_FechaInicio.Text = "Fecha Inicio";
             this.lbl_FechaInicio.Visible = false;
@@ -79,12 +77,11 @@
             // lbl_FechaFin
             // 
             this.lbl_FechaFin.AutoSize = true;
-            this.lbl_FechaFin.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_FechaFin.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_FechaFin.ForeColor = System.Drawing.Color.White;
-            this.lbl_FechaFin.Location = new System.Drawing.Point(71, 117);
-            this.lbl_FechaFin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_FechaFin.Location = new System.Drawing.Point(53, 95);
             this.lbl_FechaFin.Name = "lbl_FechaFin";
-            this.lbl_FechaFin.Size = new System.Drawing.Size(83, 24);
+            this.lbl_FechaFin.Size = new System.Drawing.Size(68, 20);
             this.lbl_FechaFin.TabIndex = 3;
             this.lbl_FechaFin.Text = "Fecha Fin";
             this.lbl_FechaFin.Visible = false;
@@ -92,32 +89,29 @@
             // dt_FechaInicio
             // 
             this.dt_FechaInicio.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dt_FechaInicio.Location = new System.Drawing.Point(205, 80);
-            this.dt_FechaInicio.Margin = new System.Windows.Forms.Padding(4);
+            this.dt_FechaInicio.Location = new System.Drawing.Point(154, 65);
             this.dt_FechaInicio.Name = "dt_FechaInicio";
-            this.dt_FechaInicio.Size = new System.Drawing.Size(300, 28);
+            this.dt_FechaInicio.Size = new System.Drawing.Size(226, 24);
             this.dt_FechaInicio.TabIndex = 4;
             this.dt_FechaInicio.Visible = false;
             // 
             // dt_FechaFin
             // 
             this.dt_FechaFin.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dt_FechaFin.Location = new System.Drawing.Point(205, 113);
-            this.dt_FechaFin.Margin = new System.Windows.Forms.Padding(4);
+            this.dt_FechaFin.Location = new System.Drawing.Point(154, 92);
             this.dt_FechaFin.Name = "dt_FechaFin";
-            this.dt_FechaFin.Size = new System.Drawing.Size(300, 28);
+            this.dt_FechaFin.Size = new System.Drawing.Size(226, 24);
             this.dt_FechaFin.TabIndex = 5;
             this.dt_FechaFin.Visible = false;
             // 
             // lbl_TipoReseña
             // 
             this.lbl_TipoReseña.AutoSize = true;
-            this.lbl_TipoReseña.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TipoReseña.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_TipoReseña.ForeColor = System.Drawing.Color.White;
-            this.lbl_TipoReseña.Location = new System.Drawing.Point(71, 214);
-            this.lbl_TipoReseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_TipoReseña.Location = new System.Drawing.Point(53, 174);
             this.lbl_TipoReseña.Name = "lbl_TipoReseña";
-            this.lbl_TipoReseña.Size = new System.Drawing.Size(105, 24);
+            this.lbl_TipoReseña.Size = new System.Drawing.Size(88, 20);
             this.lbl_TipoReseña.TabIndex = 7;
             this.lbl_TipoReseña.Text = "Tipo Reseña";
             this.lbl_TipoReseña.Visible = false;
@@ -129,10 +123,9 @@
             "Sommelier",
             "Normales",
             "Amigos"});
-            this.cmb_TipoReseña.Location = new System.Drawing.Point(205, 214);
-            this.cmb_TipoReseña.Margin = new System.Windows.Forms.Padding(4);
+            this.cmb_TipoReseña.Location = new System.Drawing.Point(154, 174);
             this.cmb_TipoReseña.Name = "cmb_TipoReseña";
-            this.cmb_TipoReseña.Size = new System.Drawing.Size(160, 24);
+            this.cmb_TipoReseña.Size = new System.Drawing.Size(121, 21);
             this.cmb_TipoReseña.TabIndex = 8;
             this.cmb_TipoReseña.Visible = false;
             // 
@@ -140,10 +133,9 @@
             // 
             this.chk_pdf.AutoSize = true;
             this.chk_pdf.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_pdf.Location = new System.Drawing.Point(35, 89);
-            this.chk_pdf.Margin = new System.Windows.Forms.Padding(4);
+            this.chk_pdf.Location = new System.Drawing.Point(26, 72);
             this.chk_pdf.Name = "chk_pdf";
-            this.chk_pdf.Size = new System.Drawing.Size(68, 25);
+            this.chk_pdf.Size = new System.Drawing.Size(57, 21);
             this.chk_pdf.TabIndex = 10;
             this.chk_pdf.Text = "PDF";
             this.chk_pdf.UseVisualStyleBackColor = true;
@@ -153,10 +145,9 @@
             // 
             this.chk_Excel.AutoSize = true;
             this.chk_Excel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_Excel.Location = new System.Drawing.Point(35, 41);
-            this.chk_Excel.Margin = new System.Windows.Forms.Padding(4);
+            this.chk_Excel.Location = new System.Drawing.Point(26, 33);
             this.chk_Excel.Name = "chk_Excel";
-            this.chk_Excel.Size = new System.Drawing.Size(80, 25);
+            this.chk_Excel.Size = new System.Drawing.Size(67, 21);
             this.chk_Excel.TabIndex = 9;
             this.chk_Excel.Text = "Excel";
             this.chk_Excel.UseVisualStyleBackColor = true;
@@ -166,10 +157,9 @@
             // 
             this.chk_pantalla.AutoSize = true;
             this.chk_pantalla.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_pantalla.Location = new System.Drawing.Point(35, 134);
-            this.chk_pantalla.Margin = new System.Windows.Forms.Padding(4);
+            this.chk_pantalla.Location = new System.Drawing.Point(26, 109);
             this.chk_pantalla.Name = "chk_pantalla";
-            this.chk_pantalla.Size = new System.Drawing.Size(104, 25);
+            this.chk_pantalla.Size = new System.Drawing.Size(86, 21);
             this.chk_pantalla.TabIndex = 11;
             this.chk_pantalla.Text = "Pantalla";
             this.chk_pantalla.UseVisualStyleBackColor = true;
@@ -182,11 +172,9 @@
             this.gboxSelecTipoVisual.Controls.Add(this.chk_pdf);
             this.gboxSelecTipoVisual.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gboxSelecTipoVisual.ForeColor = System.Drawing.Color.White;
-            this.gboxSelecTipoVisual.Location = new System.Drawing.Point(75, 331);
-            this.gboxSelecTipoVisual.Margin = new System.Windows.Forms.Padding(4);
+            this.gboxSelecTipoVisual.Location = new System.Drawing.Point(56, 269);
             this.gboxSelecTipoVisual.Name = "gboxSelecTipoVisual";
-            this.gboxSelecTipoVisual.Padding = new System.Windows.Forms.Padding(4);
-            this.gboxSelecTipoVisual.Size = new System.Drawing.Size(300, 180);
+            this.gboxSelecTipoVisual.Size = new System.Drawing.Size(225, 146);
             this.gboxSelecTipoVisual.TabIndex = 19;
             this.gboxSelecTipoVisual.TabStop = false;
             this.gboxSelecTipoVisual.Text = "Tipo Visualizacion";
@@ -204,11 +192,10 @@
             this.c_varietal,
             this.c_ptajes});
             this.dgv_reseñas.GridColor = System.Drawing.Color.White;
-            this.dgv_reseñas.Location = new System.Drawing.Point(513, 80);
-            this.dgv_reseñas.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_reseñas.Location = new System.Drawing.Point(385, 65);
             this.dgv_reseñas.Name = "dgv_reseñas";
             this.dgv_reseñas.RowHeadersWidth = 51;
-            this.dgv_reseñas.Size = new System.Drawing.Size(875, 460);
+            this.dgv_reseñas.Size = new System.Drawing.Size(656, 374);
             this.dgv_reseñas.TabIndex = 20;
             // 
             // c_Promedio
@@ -217,7 +204,7 @@
             this.c_Promedio.HeaderText = "Promedio";
             this.c_Promedio.MinimumWidth = 6;
             this.c_Promedio.Name = "c_Promedio";
-            this.c_Promedio.Width = 95;
+            this.c_Promedio.Width = 76;
             // 
             // c_nombre
             // 
@@ -232,7 +219,7 @@
             this.c_precio.HeaderText = "Precio";
             this.c_precio.MinimumWidth = 6;
             this.c_precio.Name = "c_precio";
-            this.c_precio.Width = 75;
+            this.c_precio.Width = 62;
             // 
             // c_bodega
             // 
@@ -258,18 +245,19 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PPAI20243K6.Properties.Resources.vinobodegapequeño;
-            this.pictureBox1.Location = new System.Drawing.Point(1131, 547);
+            this.pictureBox1.Location = new System.Drawing.Point(848, 444);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(279, 191);
+            this.pictureBox1.Size = new System.Drawing.Size(209, 155);
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
             // PantallaRankingVinos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(75)))));
-            this.ClientSize = new System.Drawing.Size(1455, 748);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(21)))), ((int)(((byte)(61)))));
+            this.ClientSize = new System.Drawing.Size(1091, 608);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgv_reseñas);
             this.Controls.Add(this.gboxSelecTipoVisual);
@@ -280,7 +268,6 @@
             this.Controls.Add(this.lbl_FechaFin);
             this.Controls.Add(this.lbl_FechaInicio);
             this.Controls.Add(this.btnConfirmar);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PantallaRankingVinos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ranking de Vinos";
