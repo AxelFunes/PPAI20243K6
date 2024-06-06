@@ -16,8 +16,9 @@ namespace PPAI20243K6.Clases
         public bool fechasValidas;
         List<Vino> arrayVinos = new List<Vino>();
         List<Vino> vinosConReseña = new List<Vino>();
-        List<int> arrPuntajes = new List<int>();
+        string arrPuntajes;
 
+        private double promedioVino;
         private float precioVino;
         private string nombreVino;
         private string datosBodega;
@@ -260,6 +261,7 @@ namespace PPAI20243K6.Clases
             vino9.agregarReseña(res22);//NO PREMIUM
             vino9.agregarReseña(res24);//NO PREMIUM
             vino9.agregarReseña(res25);//NO PREMIUM
+            vino9.agregarReseña(res20);
 
             vino10.agregarReseña(res25);//NO PREMIUM
 
@@ -299,7 +301,8 @@ namespace PPAI20243K6.Clases
             //Se recorre el array de vinos con reseña, se obtienen los datos para poder luego mostrarlos por pantalla
             for (int i = 0; i < vinosConReseña.Count; i++)
             {
-                precioVino= vinosConReseña[i].getPrecio();
+                promedioVino = vinosConReseña[i].getPromedio();
+                precioVino = vinosConReseña[i].getPrecio();
                 nombreVino= vinosConReseña[i].getNombre();
                 datosBodega = vinosConReseña[i].buscarBodega();
                 varietal = vinosConReseña[i].buscarVarietal();
@@ -310,6 +313,10 @@ namespace PPAI20243K6.Clases
                 {
                     
                     DataGridViewRow fila = new DataGridViewRow();
+                    DataGridViewTextBoxCell prom = new DataGridViewTextBoxCell();
+                    prom.Value = promedioVino;
+                    fila.Cells.Add(prom);
+
                     DataGridViewTextBoxCell nombre = new DataGridViewTextBoxCell();
                     nombre.Value = nombreVino;
                     fila.Cells.Add(nombre);

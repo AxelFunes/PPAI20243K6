@@ -155,7 +155,7 @@ namespace PPAI20243K6.Clases
 
             return suma / puntajes.Count;
         }
-        public List<int> getArrayPuntajes()
+        public string getArrayPuntajes()
         {
             // Implementación del método para obtener los puntajes de las reseñas
             List<int> puntajes = new List<int>();
@@ -169,8 +169,12 @@ namespace PPAI20243K6.Clases
             {
                 throw new ArgumentException("La lista no puede estar vacía o ser nula");
             }
+            
+            
+            string resultado = string.Join(", ", puntajes);
+            return resultado;
 
-            return puntajes;
+            
         }
     }
 }

@@ -40,17 +40,19 @@
             this.chk_pantalla = new System.Windows.Forms.CheckBox();
             this.gboxSelecTipoVisual = new System.Windows.Forms.GroupBox();
             this.dgv_reseñas = new System.Windows.Forms.DataGridView();
-            this.c_precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_Promedio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c_bodega = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c_varietal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_ptajes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gboxSelecTipoVisual.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_reseñas)).BeginInit();
             this.SuspendLayout();
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(169, 448);
+            this.btnConfirmar.Location = new System.Drawing.Point(182, 469);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(93, 34);
             this.btnConfirmar.TabIndex = 0;
@@ -167,24 +169,31 @@
             // 
             this.dgv_reseñas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_reseñas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.c_precio,
+            this.c_Promedio,
             this.c_nombre,
+            this.c_precio,
             this.c_bodega,
-            this.c_varietal});
+            this.c_varietal,
+            this.c_ptajes});
             this.dgv_reseñas.Location = new System.Drawing.Point(385, 65);
             this.dgv_reseñas.Name = "dgv_reseñas";
             this.dgv_reseñas.Size = new System.Drawing.Size(656, 374);
             this.dgv_reseñas.TabIndex = 20;
             // 
-            // c_precio
+            // c_Promedio
             // 
-            this.c_precio.HeaderText = "Precio";
-            this.c_precio.Name = "c_precio";
+            this.c_Promedio.HeaderText = "Promedio";
+            this.c_Promedio.Name = "c_Promedio";
             // 
             // c_nombre
             // 
             this.c_nombre.HeaderText = "Nombre";
             this.c_nombre.Name = "c_nombre";
+            // 
+            // c_precio
+            // 
+            this.c_precio.HeaderText = "Precio";
+            this.c_precio.Name = "c_precio";
             // 
             // c_bodega
             // 
@@ -195,6 +204,11 @@
             // 
             this.c_varietal.HeaderText = "Varietal";
             this.c_varietal.Name = "c_varietal";
+            // 
+            // c_ptajes
+            // 
+            this.c_ptajes.HeaderText = "Puntajes";
+            this.c_ptajes.Name = "c_ptajes";
             // 
             // PantallaRankingVinos
             // 
@@ -234,10 +248,12 @@
         private System.Windows.Forms.CheckBox chk_pantalla;
         private System.Windows.Forms.GroupBox gboxSelecTipoVisual;
         private System.Windows.Forms.DataGridView dgv_reseñas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_Promedio;
         private System.Windows.Forms.DataGridViewTextBoxColumn c_nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn c_bodega;
         private System.Windows.Forms.DataGridViewTextBoxColumn c_varietal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_ptajes;
     }
 }
 
