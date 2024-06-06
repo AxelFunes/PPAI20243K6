@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.consultarEncuestaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opc_GenerarRanking = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +52,7 @@
             // 
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultarEncuestaToolStripMenuItem});
+            this.opc_GenerarRanking});
             this.toolStripDropDownButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
@@ -61,14 +61,14 @@
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(71, 22);
             this.toolStripDropDownButton1.Text = "Opciones";
             // 
-            // consultarEncuestaToolStripMenuItem
+            // opc_GenerarRanking
             // 
-            this.consultarEncuestaToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.consultarEncuestaToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.consultarEncuestaToolStripMenuItem.Name = "consultarEncuestaToolStripMenuItem";
-            this.consultarEncuestaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.consultarEncuestaToolStripMenuItem.Text = "Generar Ranking";
-            this.consultarEncuestaToolStripMenuItem.Click += new System.EventHandler(this.consultarEncuestaToolStripMenuItem_Click);
+            this.opc_GenerarRanking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.opc_GenerarRanking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.opc_GenerarRanking.Name = "opc_GenerarRanking";
+            this.opc_GenerarRanking.Size = new System.Drawing.Size(180, 22);
+            this.opc_GenerarRanking.Text = "Generar Ranking";
+            this.opc_GenerarRanking.Click += new System.EventHandler(this.opc_GenerarRanking_Click);
             // 
             // toolStripButton1
             // 
@@ -100,7 +100,7 @@
 
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
-        private System.Windows.Forms.ToolStripMenuItem consultarEncuestaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem opc_GenerarRanking;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

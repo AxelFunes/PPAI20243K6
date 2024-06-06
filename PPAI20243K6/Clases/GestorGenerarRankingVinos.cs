@@ -63,10 +63,7 @@ namespace PPAI20243K6.Clases
             }
         }
 
-        public void buscarTiposReseña()
-        {
-            // Implementación del método para buscar tipos de reseña
-        }
+        
 
         public void tomarTipoReseña(string tipoReseña)
         {
@@ -307,7 +304,7 @@ namespace PPAI20243K6.Clases
                 datosBodega = vinosConReseña[i].buscarBodega();
                 varietal = vinosConReseña[i].buscarVarietal();
                 calificacionGral = vinosConReseña[i].getPromedio();
-                arrPuntajes = vinosConReseña[i].getArrayPuntajes();
+                arrPuntajes = vinosConReseña[i].getArrayPuntajes(premium);
 
                 if (tipoVis == "pantalla")
                 {

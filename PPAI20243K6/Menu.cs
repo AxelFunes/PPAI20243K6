@@ -17,7 +17,7 @@ namespace PPAI20243K6
             InitializeComponent();
         }
 
-        private void consultarEncuestaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void opc_GenerarRanking_Click(object sender, EventArgs e)
         {
             this.Hide();
             PantallaRankingVinos pantalla = new PantallaRankingVinos();

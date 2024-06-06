@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Web;
 
 namespace PPAI20243K6.Clases
@@ -155,23 +157,42 @@ namespace PPAI20243K6.Clases
 
             return suma / puntajes.Count;
         }
-        public string getArrayPuntajes()
+        public string getArrayPuntajes(bool premium)
         {
             // Implementación del método para obtener los puntajes de las reseñas
             List<int> puntajes = new List<int>();
+            List<int> puntajesNoPremium = new List<int>();
 
             for (int i = 0; i < this.Reseñas.Count; i++)
             {
-                puntajes.Add(this.Reseñas[i].getPuntaje());
+                if (this.Reseñas[i].esPremium)
+                {
+                    puntajes.Add(this.Reseñas[i].getPuntaje());
+                }
+                else
+                {
+                    puntajesNoPremium.Add(this.Reseñas[i].getPuntaje());
+                }
+                
             }
+            
 
             if (puntajes == null || puntajes.Count == 0)
             {
                 throw new ArgumentException("La lista no puede estar vacía o ser nula");
             }
-            
-            
-            string resultado = string.Join(", ", puntajes);
+
+            string resultado;
+
+            if (premium)
+            {
+                resultado = string.Join(", ", puntajes);
+            }
+            else
+            {
+                resultado = string.Join(", ", puntajesNoPremium);
+            }
+
             return resultado;
 
             
