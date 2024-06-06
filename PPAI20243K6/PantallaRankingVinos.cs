@@ -24,11 +24,15 @@ namespace PPAI20243K6
         {
             InitializeComponent();
             gestor = new GestorGenerarRankingVinos(this);
+            gestor.generarRanking();
 
         }
         public void solicitarFechasDesdeHasta()
         {
-
+            lbl_FechaFin.Visible = true;
+            lbl_FechaInicio.Visible = true;
+            dt_FechaFin.Visible = true;
+            dt_FechaInicio.Visible=true;
             // Implementación del método para tomar fecha desde
         }
 
