@@ -30,12 +30,7 @@ namespace PPAI20243K6.Clases
 
         public Vino(int añada, DateTime fechaActualizacion, bool imagenEtiqueta, string nombre, int notaCata, float precioARS, string coordUbicacionBodega, string descripBodega, string historiaBodega, string nombreBodega, int periodoActualizacionBodega,string nombreReg, string descripcionReg, string nomPais)
         {
-            //Id = id;
-            //DescripcionOperador = desc;
-            //DetalleOpcionRequerida = detalleOpReq;
-            //Duracion = duracion;
-            //EncuestaEnviada = encuestaEnviada;
-            //ObservacionAuditor = observAuditor;
+           
             this.añada = añada;
             this.fechaActualizacion = fechaActualizacion;
             this.imagenEtiqueta= imagenEtiqueta;
@@ -45,8 +40,7 @@ namespace PPAI20243K6.Clases
             Varietal= new List<Varietal>();
             Reseñas = new List<Reseña>();
             Bodega = new Bodega(coordUbicacionBodega, descripBodega, historiaBodega, nombreBodega, periodoActualizacionBodega, nombreReg, descripcionReg, nomPais);
-            //CambiosEst.Add(primerCambioEstado);
-            //RespuestasCliente = new List<RespuestaDeCliente>();
+           
 
         }
         public void setPromedio(double prom)
@@ -143,7 +137,7 @@ namespace PPAI20243K6.Clases
             List<int> puntajesNoPremium = new List<int>();
             for (int i = 0; i < this.Reseñas.Count; i++)
             {
-                if (Reseñas[i].esPremium)//== premium)
+                if (Reseñas[i].EsPremium())//== premium)
                 {
                     puntajes.Add(this.Reseñas[i].getPuntaje());
                 }
@@ -188,7 +182,7 @@ namespace PPAI20243K6.Clases
 
             for (int i = 0; i < this.Reseñas.Count; i++)
             {
-                if (this.Reseñas[i].esPremium)
+                if (this.Reseñas[i].EsPremium())
                 {
                     puntajes.Add(this.Reseñas[i].getPuntaje());
                 }

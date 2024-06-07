@@ -12,7 +12,7 @@ namespace PPAI20243K6.Clases
     internal class GestorGenerarRankingVinos
     {
         public PantallaRankingVinos PantallaAsociada;
-        public int reportesAGenerar { get; set; }
+        private int reportesAGenerar { get; set; }
         private DateTime fechaDesde;
         private DateTime fechaHasta;
         public bool fechasValidas;
@@ -403,7 +403,7 @@ namespace PPAI20243K6.Clases
                     }
 
                     // Guardar el archivo Excel
-                    string filePath = "C:/Users/GZ Tienda/Desktop/RankingDeVinos.xlsx";
+                    string filePath = "C:/DSI/RankingDeVinos.xlsx";
                     workbook.SaveAs(filePath);
 
                     // Informar al usuario de que el archivo se ha guardado
@@ -441,7 +441,8 @@ namespace PPAI20243K6.Clases
         public void FinCU()
         {
             // Implementación del método para finalizar el caso de uso
-            PantallaAsociada.Close();
+            //PantallaAsociada.Close();
+
         }
     }
 }

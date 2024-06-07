@@ -10,7 +10,7 @@ namespace PPAI20243K6.Clases
     internal class Varietal
     {
         private string descripcion { get; set; }
-        public decimal porcentajeComposicion { get; set; }
+        private decimal porcentajeComposicion { get; set; }
 
         public Varietal(string descripcionVar, int porcentaje)
         {

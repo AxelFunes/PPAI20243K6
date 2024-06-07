@@ -8,7 +8,7 @@ namespace PPAI20243K6.Clases
 {
     internal class Provincia
     {
-        public string nombreProv { get; set; }
+        private string nombreProv { get; set; }
         private Pais paisP {get; set; }
 
         public Provincia(string nombre, string nombrePais)

@@ -8,10 +8,10 @@ namespace PPAI20243K6.Clases
 {
     internal class Reseña
     {
-        public string comentario { get; set; }
-        public bool esPremium { get; set; }
-        public DateTime fechaReseña { get; set; }
-        public int puntaje { get; set; }
+        private string comentario { get; set; }
+        private bool esPremium { get; set; }
+        private DateTime fechaReseña { get; set; }
+        private int puntaje { get; set; }
 
         public Reseña(string comentarioRes, bool esPremiumRes, DateTime fechaReseñaRes, int puntajeRes)
         {

@@ -8,8 +8,8 @@ namespace PPAI20243K6.Clases
 {
     internal class TipoUva
     {
-        public string descripcion { get; set; }
-        public string nombre { get; set; }
+        private string descripcion { get; set; }
+        private string nombre { get; set; }
 
         public string GetNombre()
         {

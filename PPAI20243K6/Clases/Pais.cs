@@ -8,7 +8,7 @@ namespace PPAI20243K6.Clases
 {
     internal class Pais
     {
-        public string nombrePais { get; set; }
+        private string nombrePais { get; set; }
         public Pais(string nombre)
         {
             nombrePais = nombre;

@@ -8,8 +8,8 @@ namespace PPAI20243K6.Clases
 {
     internal class RegionVitivinicola
     {
-        public string descripcionReg { get; set; }
-        public string nombreReg { get; set; }
+        private string descripcionReg { get; set; }
+        private string nombreReg { get; set; }
 
         private Provincia provincia { get; set; }
         private Pais pais { get; set; }
